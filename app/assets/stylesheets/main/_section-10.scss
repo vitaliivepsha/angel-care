@@ -1,0 +1,146 @@
+.blog-section{
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+
+.blog-section__head{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  >a{
+    padding: 0 5px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    text-decoration: underline;
+    color: $text;
+    &:hover{
+      text-decoration: none;
+      color: $main;
+    }
+  }
+}
+
+.blog-section__descr{
+  display: block;
+  font-size: 21px;
+  line-height: 130%;
+  margin-bottom: 15px;
+}
+
+.blog-section__wrapper{
+  display: flex;
+}
+
+.blog-item{
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(64, 64, 64, 0.2);
+    .blog-item__pic{
+      border-radius: 10px 10px 0 0;
+    }
+    .blog-item__info{
+      .btn{
+        border-color: $main;
+        background-color: $main;
+        color: #fff;
+      }
+    }
+  }
+  &:focus{
+    text-decoration: none;
+  }
+}
+
+.blog-item__pic{
+  position: relative;
+  height: 290px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: linear .2s;
+  &:after{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    mix-blend-mode: lighten;
+    background-color: $main;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.blog-item__label{
+  position: absolute;
+  top: 30px;
+  right: 0;
+  min-width: 105px;
+  height: 30px;
+  background: #fff;
+  border-radius: 5px 0 0 5px;
+  font-size: 14px;
+  line-height: 130%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $main;
+  padding: 0 15px;
+}
+
+.blog-item__info{
+  padding: 15px 15px 20px;
+  height: calc(100% - 290px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .btn{
+    width: 100%;
+  }
+}
+
+.blog-item__title{
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 130%;
+  display: block;
+  margin-bottom: 5px;
+  color: $main;
+}
+
+.blog-item__descr{
+  font-size: 16px;
+  line-height: 130%;
+  color: $text;
+  margin-bottom: 10px;
+}
+
+.blog-item__additional{
+  display: flex;
+  margin-bottom: 15px;
+  >span{
+    display: flex;
+    align-items: center;
+    color: rgba($text, .7);
+    margin-right: 20px;
+    svg{
+      margin-right: 8px;
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}

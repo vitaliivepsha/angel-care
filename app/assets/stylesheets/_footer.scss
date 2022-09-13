@@ -1,0 +1,142 @@
+.footer{
+  padding-top: 32px;
+  padding-bottom: 45px;
+  background-color: $main;
+}
+
+.footer-wrapper{
+  display: flex;
+  .col{
+    height: inherit;
+    padding: 0 15px;
+    &-logo{
+      width: 340px;
+      >div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+    &-menu{
+      width: 260px;
+    }
+    &-contacts{
+      width: 280px;
+      display: flex;
+      justify-content: flex-end;
+      >div{
+        width: 215px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+    >div{
+      height: 100%;
+    }
+  }
+}
+
+.footer-logo__wrapper{
+  width: 265px;
+  max-width: 100%;
+}
+
+.footer-logo{
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer-descr{
+  display: block;
+  font-size: 14px;
+  line-height: 130%;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-copyright{
+  margin-top: 15px;
+  display: block;
+  font-size: 11px;
+  line-height: 130%;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-subtitle{
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 130%;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer-menu{
+  font-size: 14px;
+  line-height: 130%;
+  li{
+    margin-bottom: 10px;
+    a{
+      position: relative;
+      padding-left: 24px;
+      color: #fff;
+      text-decoration: none;
+      &:hover{
+        color: $yellow;
+        text-decoration: none;
+      }
+      svg{
+        position: absolute;
+        left: 0;
+        top: 4px;
+      }
+    }
+  }
+}
+
+.footer-contacts{
+  a{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    text-decoration: none;
+    margin-bottom: 10px;
+    &:hover, &:focus{
+      text-decoration: none;
+    }
+    &:hover{
+      color: $yellow;
+    }
+    svg{
+      margin-right: 10px;
+    }
+  }
+}
+
+.footer-socials{
+  >ul{
+    display: flex;
+    li{
+      margin-right: 10px;
+      a{
+        display: flex;
+        svg{
+          path{
+            opacity: .8;
+          }
+        }
+        &:hover{
+          svg{
+            path{
+              opacity: 1;
+              fill: $yellow;
+            }
+          }
+        }
+      }
+    }
+  }
+}

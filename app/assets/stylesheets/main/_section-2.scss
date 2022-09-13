@@ -1,0 +1,77 @@
+.proposal-section{
+  position: relative;
+  padding-bottom: 35px;
+  margin-top: -60px;
+}
+
+.proposal-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.proposal-item{
+  width: 100%;
+  position: relative;
+  padding: 60px 20px 53px;
+  box-shadow: 0px 4px 20px rgba(64, 64, 64, 0.1);
+  border-radius: 10px;
+  &__green{
+    background-color: $green;
+    >i{
+      background-color: $green;
+    }
+    .btn{
+      color: $green;
+    }
+  }
+  &__yellow{
+    background-color: $yellow;
+    >i{
+      background-color: $yellow;
+    }
+    .btn{
+      color: $yellow;
+    }
+  }
+  &__purple{
+    background-color: $purple;
+    >i{
+      background-color: $purple;
+    }
+    .btn{
+      color: $purple;
+    }
+  }
+  >i{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -39px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  span{
+    min-height: 80px;
+    height: calc(100% - 97px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 130%;
+    color: #fff;
+  }
+  .btn{
+    width: 270px;
+    max-width: 100%;
+    margin: 37px auto 0;
+    &:hover{
+      color: #fff;
+    }
+  }
+}

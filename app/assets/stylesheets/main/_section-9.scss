@@ -1,0 +1,147 @@
+.process-section{
+  padding-top: 85px;
+  padding-bottom: 95px;
+  background-color: $bg-grey;
+}
+
+.process-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 65px;
+  .btn{
+    background-color: $red;
+    border-color: $red;
+    color: #fff;
+    width: 270px;
+    box-shadow: 0 4px 20px rgba(64, 64, 64, 0.2);
+    &:hover{
+      background-color: $main;
+      border-color: $main;
+      color: #fff;
+    }
+  }
+}
+
+.process-body{
+  display: flex;
+  >.col{
+    padding-top: 110px;
+    margin-right: 60px;
+    &.double{
+      padding-top: 0;
+      margin-right: 92px;
+    }
+    &.lg{
+      padding-top: 42px;
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
+
+.process-item{
+  width: 140px;
+  >div{
+    position: relative;
+    width: 140px;
+    height: 140px;
+    border: 1px solid;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    >i{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      width: 118px;
+      height: 118px;
+    }
+    >svg{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: calc(100% + 17px);
+    }
+  }
+  >span{
+    display: block;
+    text-align: center;
+    font-size: 21px;
+    line-height: 130%;
+    margin-top: 20px;
+  }
+  &__blue{
+    >div{
+      border-color: $main;
+      >i{
+        background-color: $main;
+      }
+    }
+  }
+  &__yellow{
+    >div{
+      border-color: $yellow;
+      >i{
+        background-color: $yellow;
+      }
+    }
+  }
+  &__red{
+    >div{
+      border-color: $red;
+      >i{
+        background-color: $red;
+      }
+    }
+  }
+  &__green{
+    >div{
+      border-color: $green;
+      >i{
+        background-color: $green;
+      }
+    }
+  }
+  &__call{
+    >div{
+      >svg{
+        top: auto;
+        bottom: 33px;
+        transform: none;
+        left: calc(100% + 33px);
+      }
+    }
+  }
+  &__email{
+    margin-top: 17px;
+    >div{
+      >svg{
+        top: auto;
+        bottom: 60px;
+        transform: none;
+        left: calc(100% + 33px);
+      }
+    }
+    >span{
+      position: relative;
+      min-width: max-content;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &__lg{
+    width: 268px;
+    >div{
+      width: 268px;
+      height: 268px;
+      >i{
+        width: 226px;
+        height: 226px;
+      }
+    }
+  }
+}
