@@ -188,22 +188,22 @@ main {
 
 .input {
   width: 100%;
-  padding: 10px 0;
-  border: none;
-  border-bottom: 1px solid #fff;
-  color: #fff;
-  font-size: 12px;
-  line-height: 15px;
-  background-color: transparent;
+  height: 50px;
+  padding: 0 20px;
+  background: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  color: $main;
+  font-size: 16px;
+  line-height: 130%;
   outline: none !important;
   box-shadow: none !important;
-  border-radius: 0;
   @include bp(xs) {
-    padding: 7px 0;
+
   }
 
   &::placeholder {
-    color: #fff;
+    color: $text;
   }
 
   &:focus {
@@ -222,11 +222,11 @@ select:-webkit-autofill:hover,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:focus,
 textarea:-webkit-autofill:hover {
-  -webkit-text-fill-color: #fff;
+  -webkit-text-fill-color: $main;
   -webkit-box-shadow: inset 0 0 0 1000px transparent;
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
-  caret-color: #fff;
+  caret-color: $main;
 }
 
 .validate-error {
@@ -236,7 +236,7 @@ textarea:-webkit-autofill:hover {
   left: 0;
   bottom: -20px;
   font-size: 10px;
-  color: #FEA362;
+  color: $red;
 }
 
 .overlay {
@@ -289,4 +289,12 @@ textarea:-webkit-autofill:hover {
 @import "footer";
 
 // Pages
+<<<<<<< HEAD
 @import "about";
+=======
+@import "skilled-services";
+
+// Parts
+@import "quality-items";
+@import "consult";
+>>>>>>> 4a6f78dac913778556cc2bd930905aa6da25205a

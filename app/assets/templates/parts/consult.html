@@ -1,45 +1,97 @@
 <div class="section consult-section">
-  <div class="container">
-    <div class="row consult-wrapper">
-      <div class="col">
-        <div class="consult-title">Свяжитесь с нами!</div>
-        <span class="consult-descr">Заполните форму и наши менеджеры ответят вам</span>
-        <a href="javascript:void(0)" class="consult-link">Контакты</a>
-      </div>
-      <div class="col">
-        <form class="consult-form ajax_form clear-styles" data-error-title="Ошибка отправки!" data-error-message="Попробуйте еще раз через некоторое время." data-success-title="Спасибо за сообщение" data-success-message="Наш менеджер свяжется с Вами в ближайшее время.">
-          <div class="radio-wrapper">
-            <span>Связаться как:</span>
-            <div class="radio">
-              <input type="radio" name="type" id="r1">
-              <label for="r1">Поставщик</label>
-            </div>
-            <div class="radio">
-              <input type="radio" name="type" id="r2">
-              <label for="r2">Дистрибьютор</label>
-            </div>
-            <div class="radio">
-              <input type="radio" name="type" id="r3">
-              <label for="r3">Потребитель</label>
-            </div>
-          </div>
-          <div class="input-wrapper">
-            <input class="input" type="text" name="name" placeholder="Имя" data-title="Имя" data-validate-required="Обязательное поле">
-          </div>
-          <div class="form-row">
-            <div class="input-wrapper">
-              <input class="input" type="email" name="email" placeholder="Email" data-title="Email" data-validate-required="Обязательное поле" data-validate-email="Неправильный email">
-            </div>
-            <div class="input-wrapper">
-              <input class="input" type="tel" name="phone" placeholder="Телефон" data-title="Телефон" data-validate-required="Обязательное поле" data-validate-uaphone="Неправильный номер">
-            </div>
-          </div>
-          <div class="input-wrapper">
-            <input class="input" type="text" name="comment" placeholder="Текст сообщения" data-title="Сообщение" data-validate-required="Обязательное поле">
-          </div>
-          <button type="submit" class="btn btn-tr">Отправить</button>
-        </form>
-      </div>
+    <div class="consult-top">
+        <div class="container">
+            <div class="section-title">Send us a message</div>
+            <span class="section-pretitle">Angel Care staff is available to speak with you Monday through Friday from 9am-5pm</span>
+        </div>
     </div>
-  </div>
+    <div class="consult-bot tabs-wrapper">
+        <div class="container">
+            <div class="consult-wrapper">
+                <ul class="consult-tabs tabs">
+                    <li class="active">Patient</li>
+                    <li class="yellow">Caregiver</li>
+                </ul>
+                <div class="consult-tabs__content tabs-content active">
+                    <form class="consult-form ajax_form clear-styles" data-error-title="Sending error!" data-error-message="Please try again later." data-success-title="Thank you for contacting us." data-success-message="We will contact you shortly.">
+                        <div class="consult-form__row">
+                            <div class="col">
+                                <div class="input-wrapper">
+                                    <input class="input" type="text" name="first_name" placeholder="First Name" data-title="First Name">
+                                </div>
+                                <div class="input-wrapper">
+                                    <input class="input" type="text" name="last_name" placeholder="Last Name*" data-title="Last Name" data-validate-required="Required!">
+                                </div>
+                                <div class="input-wrapper">
+                                    <input class="input" type="text" name="phone" placeholder="Phone Number*" data-title="Phone Number" data-validate-required="Required!">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="input-wrapper">
+                                    <input class="input" type="text" name="email" placeholder="Email Address" data-title="Email Address">
+                                </div>
+                                <div class="input-wrapper">
+                                    <select class="select">
+                                        <option selected disabled>Choose the service</option>
+                                        <option>service 1</option>
+                                        <option>service 2</option>
+                                        <option>service 3</option>
+                                        <option>service 4</option>
+                                    </select>
+                                </div>
+                                <div class="input-wrapper">
+                                    <input class="input" type="text" name="message" placeholder="Message*" data-title="Message" data-validate-required="Required!">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="consult-form__row">
+                            <div class="col">
+                                <div class="radio-wrapper">
+                                    <span>Are you the patient?</span>
+                                    <div>
+                                        <div class="radio">
+                                            <input type="radio" name="patient" id="p1">
+                                            <label for="p1"><span></span>Yes</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="patient" id="p2">
+                                            <label for="p2"><span></span>No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="radio-wrapper">
+                                    <span>Do you live in NYC area?</span>
+                                    <div>
+                                        <div class="radio">
+                                            <input type="radio" name="nyc" id="nyc1">
+                                            <label for="nyc1"><span></span>Yes</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="nyc" id="nyc2">
+                                            <label for="nyc2"><span></span>No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="consult-form__row">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox" id="agree1">
+                                <label for="agree1">
+                                    <span></span>
+                                    Angel Care Inc may contact me at this number via calls or texts (including through use of an automatic telephone dialing system) to provide information about or to help me enroll in CDPAP with Angel Care. Your consent is not required to enroll. Message and data rates may apply.
+                                </label>
+                            </div>
+                        </div>
+                        <div class="consult-form__row">
+                            <button type="submit" class="btn">Send</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="consult-tabs__content consult-tabs__content__yellow tabs-content"></div>
+            </div>
+        </div>
+    </div>
 </div>
