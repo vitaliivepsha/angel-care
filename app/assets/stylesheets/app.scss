@@ -21,21 +21,26 @@ body {
   @include bp(md) {
     display: block;
   }
+
   &.menu-opened {
     overflow: hidden;
+
     .mobile-menu__wrapper {
       z-index: 10001;
       visibility: visible;
       opacity: 1;
     }
   }
+
   &.filters-opened {
     overflow: hidden;
+
     .overlay {
       z-index: 10002;
       opacity: 1;
       visibility: visible;
     }
+
     .mobile-filters__wrapper {
       right: 0;
       box-shadow: 0 0 20px rgba(56, 56, 56, 0.2);
@@ -54,19 +59,21 @@ ul {
 a,
 .slick-slide {
   outline: none;
+
   &:focus {
     outline: none;
   }
 }
 
 
-
-a{
+a {
   transition: .2s linear;
-  &:not([class]){
+
+  &:not([class]) {
     color: $main;
     text-decoration: none;
-    &:hover{
+
+    &:hover {
       color: $yellow;
     }
   }
@@ -120,11 +127,13 @@ main {
   position: relative;
   @include bp(xs) {
   }
+
   &:focus {
     text-decoration: none;
     outline: none;
     box-shadow: none;
   }
+
   &:hover {
     text-decoration: none;
     outline: none;
@@ -133,25 +142,31 @@ main {
     background-color: transparent;
     border-color: #fff;
   }
+
   &.btn-tr {
     color: #fff;
     background-color: transparent;
+
     &:focus {
       color: #fff;
     }
+
     &:hover {
       border-color: #fff;
       background-color: #fff;
       color: $main;
     }
   }
+
   &.btn-b {
     color: $main;
     border-color: $main;
     background-color: transparent;
+
     &:focus {
       color: #fff;
     }
+
     &:hover {
       border-color: $main;
       background-color: $main;
@@ -163,8 +178,9 @@ main {
 .input-wrapper {
   position: relative;
   width: 100%;
-  &.err{
-    .input{
+
+  &.err {
+    .input {
       border-color: #FEA362;
     }
   }
@@ -185,9 +201,11 @@ main {
   @include bp(xs) {
     padding: 7px 0;
   }
+
   &::placeholder {
     color: #fff;
   }
+
   &:focus {
     &::placeholder {
       color: transparent;
@@ -271,3 +289,4 @@ textarea:-webkit-autofill:hover {
 @import "footer";
 
 // Pages
+@import "about";
