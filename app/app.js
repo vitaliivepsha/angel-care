@@ -4,6 +4,7 @@
 
 if (process.env.NODE_ENV !== 'production') {
   require('./assets/templates/layouts/index.html');
+  require('./assets/templates/layouts/skilled_services.html');
 }
 
 // Depends
@@ -62,6 +63,10 @@ $(function() {
   $('.select').SumoSelect({
     forceCustomRendering: true
   });
+
+    $('.select').change(function(){
+        $(this).closest('.input-wrapper').addClass('active');
+    });
 
     // mobile menu
 

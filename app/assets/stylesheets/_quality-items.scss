@@ -1,31 +1,17 @@
-.welcome-section{
+.quality-items{
   padding-top: 35px;
-  padding-bottom: 50px;
+  padding-bottom: 35px;
   .section-pretitle{
-    margin-bottom: 5px;
     text-align: center;
+    margin-bottom: 5px;
   }
   .section-title{
-    margin-bottom: 23px;
     text-align: center;
+    margin-bottom: 26px;
   }
 }
 
-.section-pretitle{
-  display: block;
-  font-size: 21px;
-  line-height: 130%;
-}
-
-.section-title{
-  display: block;
-  color: $main;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 130%;
-}
-
-.welcome-wrapper{
+.quality-wrapper{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -37,13 +23,44 @@
   }
 }
 
-.welcome-item{
+.quality-item{
   padding: 24px 25px 25px;
-  background-color: $main;
   color: #fff;
   text-align: center;
   box-shadow: 0 4px 20px rgba(64, 64, 64, 0.1);
   border-radius: 10px;
+  &__yellow{
+    background-color: $yellow;
+    .btn{
+      &:hover{
+        color: $yellow;
+      }
+    }
+  }
+  &__green{
+    background-color: $green;
+    .btn{
+      &:hover{
+        color: $green;
+      }
+    }
+  }
+  &__red{
+    background-color: $red;
+    .btn{
+      &:hover{
+        color: $red;
+      }
+    }
+  }
+  &__purple{
+    background-color: $purple;
+    .btn{
+      &:hover{
+        color: $purple;
+      }
+    }
+  }
   i{
     height: 60px;
     display: flex;
