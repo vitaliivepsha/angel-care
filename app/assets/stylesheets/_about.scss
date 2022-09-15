@@ -300,6 +300,7 @@
 
 .about-clients {
   overflow: hidden;
+  margin-bottom: 99px;
 
   & .container {
     position: relative;
@@ -320,7 +321,7 @@
       height: 610px;
       min-width: 100vw;
       background: $bg-grey;
-      border-radius:0 10px 10px 0;
+      border-radius: 0 10px 10px 0;
     }
 
     &:after {
@@ -333,7 +334,7 @@
       height: 517px;
       width: 100vw;
       background: $yellow;
-      border-radius:10px 0 0 10px;
+      border-radius: 10px 0 0 10px;
     }
   }
 }
@@ -362,6 +363,7 @@
   & picture {
     width: 100%;
     height: 100%;
+
     & img {
       width: 100%;
       height: 100%;
@@ -402,6 +404,162 @@
   }
 }
 
+// ======== about-advantages ========
+
+.about-advantages {
+  margin-bottom: 92px;
+}
+
+.about-advantages__inner {
+  padding: 60px 120px;
+  background: $main;
+  box-shadow: 0px 4px 20px rgba(64, 64, 64, 0.1);
+  border-radius: 10px;
+}
+
+.about-advantages__title {
+  display: block;
+  margin-bottom: 28px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 120%;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.about-advantages__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 720px;
+  margin: 0 auto;
+  list-style-type: disc;
+  font-size: 18px;
+  line-height: 200%;
+
+  & li {
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 200%;
+    text-align: center;
+    color: #FFFFFF;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 12px;
+      text-align: center;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+  }
+}
+
+// ======== about-service ========
+
+.about-service__title {
+  display: block;
+  max-width: 890px;
+  margin: 0 auto;
+  margin-bottom: 86px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 130%;
+  text-align: center;
+  color: $main;
+}
+
+.about-service {
+  margin-bottom: 56px;
+
+  & .services-section {
+    background-color: $main;
+  }
+
+  & .services-section {
+    margin-bottom: 0;
+    padding-top: 148px;
+    padding-bottom: 103px;
+  }
+
+  & .services-wrapper,
+  & .services-inner {
+    border: 1px solid rgba(#fff, 0.2);
+  }
+
+}
+
+// ======== what-section  ========
+
+.about-service + .what-section {
+  padding-bottom: 0;
+  margin-bottom: 100px;
+}
+
+// ======== about-process ========
+
+.about-process {
+  &.process-section {
+    background-color: $main;
+  }
+
+  & .services-wrapper {
+    border: 1px solid #fff;
+  }
+}
+
+// ======== process-section ========
+
+.about-service {
+  & ~ .process-section {
+    background-color: $main;
+
+    & .btn {
+      &:hover {
+        background-color: #fff;
+        color: $red;
+      }
+    }
+
+    & .process-item > span {
+      color: #fff;
+    }
+
+    & .process-item > div {
+      border: 2px solid;
+    }
+
+    & .process-item > div > svg path {
+      fill: #fff;
+    }
+
+    & .process-item__blue > div {
+      border-color: #fff;
+    }
+
+    & .process-item__blue > div > i {
+      background-color: #fff;
+
+      & svg path {
+        fill: $main;
+      }
+    }
+
+    & .process-item__yellow > div {
+      border-color: $yellow;
+    }
+
+    & .process-item__green > div {
+      border-color: $green;
+    }
+  }
+}
 
 
 
