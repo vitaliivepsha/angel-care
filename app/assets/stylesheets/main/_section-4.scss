@@ -2,12 +2,23 @@
   padding-top: 284px;
   padding-bottom: 130px;
   overflow: hidden;
+  @include bp(md) {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+  @include bp(xs) {
+    padding-top: 30px;
+    padding-bottom: 55px;
+  }
 }
 
 .who-wrapper{
   position: relative;
   width: 730px;
   max-width: 100%;
+  @include bp(md) {
+    width: 100%;
+  }
   &:before{
     position: absolute;
     content: '';
@@ -17,6 +28,9 @@
     width: calc(110vw - 224px);
     background: $bg-grey;
     border-radius: 10px;
+    @include bp(md) {
+      display: none;
+    }
   }
   &:after{
     position: absolute;
@@ -27,6 +41,20 @@
     top: -149px;
     background: $yellow;
     border-radius: 10px;
+    @include bp(md) {
+      z-index: -1;
+      width: 100vw;
+      height: calc(100% - 100px);
+      left: 50%;
+      transform: translateX(-50%);
+      top: auto;
+      border-radius: 0;
+      bottom: -30px;
+    }
+    @include bp(xs) {
+      height: calc(100% - calc(72vw - 30px)/2 + 20px);
+      bottom: -20px;
+    }
   }
 }
 
@@ -39,10 +67,25 @@
   height: 535px;
   border-radius: 10px;
   overflow: hidden;
+  @include bp(md) {
+    position: static;
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+  }
   img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    @include bp(xs) {
+      display: none;
+    }
+    +img{
+      display: none;
+      @include bp(xs) {
+        display: block;
+      }
+    }
   }
 }
 
@@ -53,14 +96,26 @@
   position: relative;
   border-radius: 10px;
   padding: 50px 43px 28px;
+  @include bp(md) {
+    border-radius: 0 0 10px 10px;
+  }
+  @include bp(xs) {
+    padding: 12px 15px 18px;
+  }
   .section-title{
     color: #fff;
     text-align: center;
     margin-bottom: 12px;
+    @include bp(xs) {
+      margin-bottom: 8px;
+    }
   }
   .btn{
     width: 270px;
     margin: 0 auto 15px;
+    @include bp(xs) {
+      width: 250px;
+    }
   }
 }
 
@@ -75,6 +130,9 @@
   justify-content: center;
   border-radius: 50%;
   background-color: #fff;
+  @include bp(md) {
+    display: none;
+  }
 }
 
 .who-main__descr{
@@ -83,6 +141,9 @@
   font-size: 18px;
   line-height: 150%;
   margin-bottom: 15px;
+  @include bp(xs) {
+    font-size: 14px;
+  }
 }
 
 .who-main__footnote{
@@ -92,13 +153,21 @@
   font-size: 18px;
   line-height: 150%;
   margin-bottom: 23px;
+  @include bp(xs) {
+    font-size: 14px;
+  }
 }
 
 .who-main__link{
   display: block;
   text-align: center;
+  font-size: 16px;
+  line-height: 130%;
   color: #fff;
   text-decoration: underline;
+  @include bp(xs) {
+    font-size: 14px;
+  }
   &:hover{
     text-decoration: none;
     color: $yellow;

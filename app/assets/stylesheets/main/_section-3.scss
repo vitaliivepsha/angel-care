@@ -1,13 +1,23 @@
 .welcome-section{
   padding-top: 35px;
   padding-bottom: 50px;
+  @include bp(xs) {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
   .section-pretitle{
     margin-bottom: 5px;
     text-align: center;
+    @include bp(xs) {
+      margin-bottom: 0;
+    }
   }
   .section-title{
     margin-bottom: 23px;
     text-align: center;
+    @include bp(xs) {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -15,6 +25,9 @@
   display: block;
   font-size: 21px;
   line-height: 130%;
+  @include bp(xs) {
+    font-size: 16px;
+  }
 }
 
 .section-title{
@@ -23,6 +36,9 @@
   font-weight: 700;
   font-size: 48px;
   line-height: 130%;
+  @include bp(xs) {
+    font-size: 30px;
+  }
 }
 
 .welcome-wrapper{
@@ -30,10 +46,17 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: -30px;
+  @include bp(xs) {
+    margin: 0 -15px -20px;
+  }
   .col{
     width: 285px;
     padding: 0 15px;
     margin-bottom: 30px;
+    @include bp(xs) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -44,6 +67,10 @@
   text-align: center;
   box-shadow: 0 4px 20px rgba(64, 64, 64, 0.1);
   border-radius: 10px;
+  @include bp(xs) {
+    min-height: 236px;
+    padding: 30px 15px;
+  }
   i{
     height: 60px;
     display: flex;
@@ -58,6 +85,9 @@
     font-weight: 700;
     font-size: 21px;
     line-height: 130%;
+    @include bp(xs) {
+      height: 66px;
+    }
   }
   .btn{
     width: 200px;

@@ -2,18 +2,34 @@
   background-color: $main;
   color: #fff;
   padding: 43px 0 150px;
+  @include bp(md) {
+    padding-bottom: 60px;
+  }
+  @include bp(xs) {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
 }
 
 .main-wrapper{
   display: flex;
   flex-wrap: wrap;
+  @include bp(md) {
+    flex-direction: column-reverse;
+  }
   .col{
     padding: 0 15px;
     &.main-txt__wrapper{
       width: 53%;
+      @include bp(md) {
+        width: 100%;
+      }
     }
     &.main-pic__wrapper{
       width: 47%;
+      @include bp(md) {
+        width: 100%;
+      }
     }
   }
 }
@@ -25,6 +41,12 @@
   font-weight: 700;
   font-size: 48px;
   line-height: 130%;
+  @include bp(xs) {
+    text-align: center;
+    font-size: 30px;
+    line-height: 150%;
+    margin-bottom: 5px;
+  }
 }
 
 .main-questions{
@@ -32,6 +54,12 @@
   font-size: 14px;
   line-height: 150%;
   margin-bottom: 22px;
+  @include bp(xs) {
+    margin-bottom: 14px;
+  }
+  span{
+    min-width: max-content;
+  }
   ul{
     list-style-type: disc;
     padding-left: 18px;
@@ -42,8 +70,14 @@
 .main-txt{
   font-size: 18px;
   line-height: 150%;
+  @include bp(xs) {
+    font-size: 14px;
+  }
   p{
     margin-bottom: 15px;
+    @include bp(xs) {
+      margin-bottom: 10px;
+    }
     &:last-child{
       margin-bottom: 0;
     }
@@ -55,6 +89,18 @@
   position: relative;
   z-index: 1;
   border-radius: 10px;
+  @include bp(md) {
+    width: calc(100% - 40px);
+    margin-bottom: 70px;
+  }
+  @include bp(xs) {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0;
+    margin-bottom: 10px;
+  }
   &:before{
     position: absolute;
     z-index: -1;
@@ -65,11 +111,18 @@
     border-radius: 10px;
     right: -40px;
     bottom: -40px;
+    @include bp(xs) {
+      display: none;
+    }
   }
   img{
     width: 100%;
     object-fit: contain;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(64, 64, 64, 0.1);
+    @include bp(xs) {
+      border-radius: 0;
+      box-shadow: none;
+    }
   }
 }

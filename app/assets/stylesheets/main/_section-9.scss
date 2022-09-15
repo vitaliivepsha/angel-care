@@ -2,6 +2,11 @@
   padding-top: 85px;
   padding-bottom: 95px;
   background-color: $bg-grey;
+  overflow: hidden;
+  @include bp(xs) {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
 }
 
 .process-head{
@@ -9,12 +14,30 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 65px;
+  @include bp(sm) {
+    flex-direction: column;
+    margin-bottom: 45px;
+  }
+  @include bp(xs) {
+    margin-bottom: 30px;
+  }
   .btn{
     background-color: $red;
     border-color: $red;
     color: #fff;
     width: 270px;
     box-shadow: 0 4px 20px rgba(64, 64, 64, 0.2);
+    @include bp(md) {
+      width: 200px;
+    }
+    @include bp(sm) {
+      width: 270px;
+      margin: 30px auto 0;
+    }
+    @include bp(xs) {
+      width: 100%;
+      margin-top: 20px;
+    }
     &:hover{
       background-color: $main;
       border-color: $main;
@@ -25,15 +48,58 @@
 
 .process-body{
   display: flex;
+  @include bp(sm) {
+    flex-direction: column;
+    align-items: center;
+  }
+  @include bp(xs) {
+    margin-bottom: -50px;
+  }
   >.col{
     padding-top: 110px;
     margin-right: 60px;
+    @include bp(lg) {
+      margin-right: 40px;
+      padding-top: 100px;
+    }
+    @include bp(md) {
+      margin-right: 36px;
+      padding-top: 80px;
+    }
+    @include bp(sm) {
+      margin-right: 0;
+      margin-bottom: 40px;
+      padding-top: 0;
+    }
+    @include bp(xs) {
+      margin-bottom: 50px;
+    }
     &.double{
       padding-top: 0;
       margin-right: 92px;
+      @include bp(lg) {
+        margin-right: 62px;
+      }
+      @include bp(md) {
+        margin-right: 50px;
+      }
+      @include bp(sm) {
+        width: 270px;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 0;
+        margin-bottom: 60px;
+      }
+      @include bp(xs) {
+        width: 248px;
+        margin-bottom: 74px;
+      }
     }
     &.lg{
       padding-top: 42px;
+      @include bp(sm) {
+        padding-top: 0;
+      }
     }
     &:last-child{
       margin-right: 0;
@@ -43,15 +109,36 @@
 
 .process-item{
   width: 140px;
+  @include bp(lg) {
+    width: 130px;
+  }
+  @include bp(md) {
+    width: 100px;
+  }
+  @include bp(xs) {
+    width: 96px;
+  }
   >div{
     position: relative;
     width: 140px;
     height: 140px;
-    border: 1px solid;
+    border: 2px solid;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    @include bp(lg) {
+      width: 130px;
+      height: 130px;
+    }
+    @include bp(md) {
+      width: 100px;
+      height: 100px;
+    }
+    @include bp(xs) {
+      width: 96px;
+      height: 96px;
+    }
     >i{
       display: flex;
       align-items: center;
@@ -59,12 +146,39 @@
       border-radius: 50%;
       width: 118px;
       height: 118px;
+      @include bp(lg) {
+        width: 108px;
+        height: 108px;
+      }
+      @include bp(md) {
+        width: 85px;
+        height: 85px;
+      }
+      @include bp(xs) {
+        width: 80px;
+        height: 80px;
+        padding: 22px;
+      }
     }
     >svg{
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       left: calc(100% + 17px);
+      @include bp(lg) {
+        left: calc(100% + 10px);
+      }
+      @include bp(md) {
+        left: calc(100% + 8px);
+      }
+      @include bp(sm) {
+        left: 50%;
+        transform: translateX(-50%) rotate(90deg);
+        top: calc(100% + 55px);
+      }
+      @include bp(xs) {
+        max-width: 100%;
+      }
     }
   }
   >span{
@@ -73,6 +187,20 @@
     font-size: 21px;
     line-height: 130%;
     margin-top: 20px;
+    @include bp(md) {
+      font-size: 18px;
+      margin-top: 15px;
+    }
+    @include bp(sm) {
+      min-width: max-content;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @include bp(xs) {
+      font-size: 16px;
+      color: $main;
+    }
   }
   &__blue{
     >div{
@@ -113,17 +241,42 @@
         bottom: 33px;
         transform: none;
         left: calc(100% + 33px);
+        @include bp(lg) {
+          left: calc(100% + 20px);
+        }
+        @include bp(md) {
+          left: calc(100% + 15px);
+        }
+        @include bp(sm) {
+          left: 50%;
+          transform: translateX(-50%) rotate(90deg);
+          top: calc(100% + 65px);
+        }
       }
     }
   }
   &__email{
     margin-top: 17px;
+    @include bp(sm) {
+      margin-top: 0;
+    }
     >div{
       >svg{
         top: auto;
         bottom: 60px;
         transform: none;
         left: calc(100% + 33px);
+        @include bp(lg) {
+          left: calc(100% + 20px);
+        }
+        @include bp(md) {
+          left: calc(100% + 15px);
+        }
+        @include bp(sm) {
+          left: 50%;
+          transform: translateX(-50%) rotate(90deg);
+          top: calc(100% + 65px);
+        }
       }
     }
     >span{
@@ -135,12 +288,48 @@
   }
   &__lg{
     width: 268px;
+    @include bp(lg) {
+      width: 248px;
+    }
+    @include bp(md) {
+      width: 170px;
+    }
+    @include bp(xs) {
+      width: 174px;
+    }
     >div{
       width: 268px;
       height: 268px;
+      @include bp(lg) {
+        width: 248px;
+        height: 248px;
+      }
+      @include bp(md) {
+        width: 170px;
+        height: 170px;
+      }
+      @include bp(xs) {
+        width: 174px;
+        height: 174px;
+      }
       >i{
         width: 226px;
         height: 226px;
+        @include bp(lg) {
+          width: 211px;
+          height: 211px;
+        }
+        @include bp(md) {
+          width: 150px;
+          height: 150px;
+        }
+        @include bp(xs) {
+          width: 146px;
+          height: 146px;
+        }
+        svg{
+          width: 44px;
+        }
       }
     }
   }

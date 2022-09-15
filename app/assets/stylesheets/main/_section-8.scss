@@ -3,6 +3,10 @@
   padding-top: 60px;
   padding-bottom: 115px;
   color: #fff;
+  @include bp(xs) {
+    padding: 15px 0;
+    margin-bottom: 70px;
+  }
 }
 
 .choose-wrapper{
@@ -12,6 +16,16 @@
 
 .choose-left{
   padding-right: 115px;
+  @include bp(lg) {
+    padding-right: 65px;
+  }
+  @include bp(md) {
+    padding-right: 15px;
+    margin-bottom: 45px;
+  }
+  @include bp(xs) {
+    margin-bottom: 20px;
+  }
   .section-title{
     margin-bottom: 15px;
     color: #fff;
@@ -20,6 +34,11 @@
   p{
     font-size: 18px;
     margin-bottom: 15px;
+    @include bp(xs) {
+      font-size: 14px;
+      line-height: 130%;
+      margin-bottom: 10px;
+    }
     &:last-child{
       margin-bottom: 0;
     }
@@ -36,12 +55,24 @@
     margin-bottom: 25px;
     line-height: 120%;
     color: #fff;
+    @include bp(xs) {
+      margin-bottom: 10px;
+    }
   }
   ul{
     list-style-type: disc;
     padding-left: 18px;
+    font-size: 18px;
+    line-height: 120%;
+    @include bp(xs) {
+      font-size: 14px;
+      line-height: 150%;
+    }
     li{
       margin-bottom: 9px;
+      @include bp(xs) {
+        margin-bottom: 0;
+      }
       &:last-child{
         margin-bottom: 0;
       }

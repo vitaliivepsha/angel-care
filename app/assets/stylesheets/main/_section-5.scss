@@ -1,10 +1,20 @@
 .questions-section{
   padding-top: 50px;
   padding-bottom: 35px;
+  @include bp(xs) {
+    padding-top: 35px;
+    padding-bottom: 5px;
+  }
 }
 
 .questions-wrapper{
   display: flex;
+  flex-wrap: wrap;
+  .col-xs-12{
+    @include bp(md) {
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .questions-item{
@@ -32,6 +42,12 @@
     .questions-item__body{
       background-color: $purple;
     }
+    .questions-item__title{
+      @include bp(xs) {
+        font-size: 21px;
+        line-height: 120%;
+      }
+    }
   }
 }
 
@@ -45,6 +61,9 @@
   font-size: 16px;
   line-height: 130%;
   margin-bottom: 20px;
+  @include bp(xs) {
+    font-size: 14px;
+  }
   span{
     display: flex;
     align-items: center;
@@ -63,6 +82,10 @@
   box-shadow: 0 4px 20px rgba(64, 64, 64, 0.1);
   border-radius: 10px;
   padding: 20px 30px 40px;
+  @include bp(xs) {
+    height: 470px;
+    padding: 15px 10px 20px 20px;
+  }
 }
 
 .questions-item__title{
@@ -71,6 +94,9 @@
   font-size: 30px;
   line-height: 120%;
   margin-bottom: 40px;
+  @include bp(xs) {
+    margin-bottom: 15px;
+  }
   strong{
     font-weight: 700;
   }
@@ -79,6 +105,9 @@
 .questions-item__text{
   font-size: 18px;
   line-height: 130%;
+  @include bp(xs) {
+    font-size: 16px;
+  }
   strong{
     font-weight: 700;
   }
@@ -90,23 +119,45 @@
 .questions-item__list{
   +.questions-item__list{
     margin-top: 40px;
+    @include bp(xs) {
+      margin-top: 10px;
+    }
   }
   &-row{
     display: flex;
     >span{
       width: 65px;
+      line-height: 150%;
+      @include bp(xs) {
+        width: 50px;
+        font-size: 14px;
+      }
     }
     >ul{
       width: calc(100% - 65px);
+      @include bp(xs) {
+        width: calc(100% - 50px);
+      }
     }
   }
   >span{
     display: block;
     margin-bottom: 5px;
+    @include bp(xs) {
+      font-size: 14px;
+    }
+    svg{
+      @include bp(xs) {
+        width: 38px;
+      }
+    }
   }
   >ul{
     list-style-type: disc;
     padding-left: 18px;
     line-height: 150%;
+    @include bp(xs) {
+      font-size: 14px;
+    }
   }
 }

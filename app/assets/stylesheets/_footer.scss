@@ -2,15 +2,35 @@
   padding-top: 32px;
   padding-bottom: 45px;
   background-color: $main;
+  @include bp(xs) {
+    padding: 40px 15px;
+  }
 }
 
 .footer-wrapper{
   display: flex;
+  @include bp(md) {
+    flex-wrap: wrap;
+    position: relative;
+    padding-bottom: 45px;
+  }
+  @include bp(xs) {
+    padding-bottom: 25px;
+  }
   .col{
     height: inherit;
     padding: 0 15px;
     &-logo{
       width: 340px;
+      @include bp(md) {
+        width: 50%;
+        order: 1;
+        margin-bottom: 45px;
+      }
+      @include bp(xs) {
+        width: 100%;
+        margin-bottom: 18px;
+      }
       >div{
         display: flex;
         flex-direction: column;
@@ -19,16 +39,39 @@
     }
     &-menu{
       width: 260px;
+      @include bp(md) {
+        width: 50%;
+        order: 3;
+      }
+      @include bp(xs) {
+        width: 100%;
+        order: 2;
+        margin-bottom: 10px;
+        margin-top: -8px;
+      }
     }
     &-contacts{
       width: 280px;
       display: flex;
       justify-content: flex-end;
+      @include bp(md) {
+        width: 50%;
+        order: 2;
+        margin-bottom: 45px;
+      }
+      @include bp(xs) {
+        width: 100%;
+        order: 3;
+        margin-bottom: 10px;
+      }
       >div{
         width: 215px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        @include bp(md) {
+          width: 100%;
+        }
       }
     }
     >div{
@@ -45,6 +88,9 @@
 .footer-logo{
   display: block;
   margin-bottom: 20px;
+  @include bp(xs) {
+    margin-bottom: 15px;
+  }
 }
 
 .footer-descr{
@@ -60,6 +106,11 @@
   font-size: 11px;
   line-height: 130%;
   color: rgba(255, 255, 255, 0.8);
+  @include bp(md) {
+    position: absolute;
+    left: 15px;
+    bottom: 0;
+  }
 }
 
 .footer-subtitle{
@@ -69,13 +120,22 @@
   line-height: 130%;
   color: #fff;
   margin-bottom: 15px;
+  @include bp(xs) {
+    margin-bottom: 3px;
+  }
 }
 
 .footer-menu{
   font-size: 14px;
   line-height: 130%;
+  @include bp(xs) {
+    margin-bottom: 8px;
+  }
   li{
     margin-bottom: 10px;
+    @include bp(xs) {
+      margin-bottom: 1px;
+    }
     a{
       position: relative;
       padding-left: 24px;
@@ -95,6 +155,9 @@
 }
 
 .footer-contacts{
+  @include bp(xs) {
+    margin-top: -8px;
+  }
   a{
     display: flex;
     align-items: center;
@@ -104,6 +167,9 @@
     line-height: 150%;
     text-decoration: none;
     margin-bottom: 10px;
+    @include bp(xs) {
+      margin-bottom: 1px;
+    }
     &:hover, &:focus{
       text-decoration: none;
     }
@@ -117,8 +183,14 @@
 }
 
 .footer-socials{
+  @include bp(xs) {
+    margin-top: 10px;
+  }
   >ul{
     display: flex;
+    @include bp(xs) {
+      margin-top: 8px;
+    }
     li{
       margin-right: 10px;
       a{
