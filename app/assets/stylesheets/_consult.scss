@@ -14,6 +14,9 @@
 .consult-bot{
   padding-bottom: 40px;
   background-color: $bg-grey;
+  @include bp(xs) {
+    padding-bottom: 10px;
+  }
 }
 
 .consult-wrapper{
@@ -38,6 +41,9 @@
     font-size: 21px;
     line-height: 130%;
     color: #fff;
+    @include bp(xs) {
+      font-size: 16px;
+    }
     &.yellow{
       background: $yellow;
     }
@@ -51,6 +57,13 @@
   display: none;
   background: $main;
   padding: 32px 92px 60px;
+  border-radius: 0 0 10px 10px;
+  @include bp(md) {
+    padding: 32px 60px 60px;
+  }
+  @include bp(xs) {
+    padding: 30px 15px 45px;
+  }
   &__yellow{
     background: $yellow;
     .consult-form__row{
@@ -63,6 +76,12 @@
           }
         }
       }
+      .btn{
+        color: $yellow;
+        &:hover{
+          color: #fff;
+        }
+      }
     }
   }
   &.active{
@@ -73,11 +92,20 @@
 .consult-form__row{
   display: flex;
   justify-content: space-between;
+  @include bp(md) {
+    flex-direction: column;
+  }
   .col{
     width: calc(50% - 22px);
+    @include bp(md) {
+      width: 100%;
+    }
   }
   .input-wrapper{
     margin-bottom: 20px;
+    @include bp(xs) {
+      margin-bottom: 10px;
+    }
     &.active{
       .SumoSelect{
         >.CaptionCont{
@@ -112,9 +140,16 @@
       color: $text;
       font-size: 16px;
       line-height: 130%;
+      @include bp(xs) {
+        font-size: 14px;
+        padding: 0 15px;
+      }
       >span{
         cursor: pointer;
         padding-right: 60px;
+        @include bp(xs) {
+          padding-right: 40px;
+        }
         &.placeholder{
           color: $text;
           font-style: normal;
@@ -124,6 +159,9 @@
         cursor: pointer;
         margin-bottom: 0;
         width: 60px;
+        @include bp(xs) {
+          width: 40px;
+        }
         >i{
           background: none;
           cursor: pointer;
@@ -139,10 +177,29 @@
           mask-size: contain;
           background-color: $main;
           margin-right: 26px;
+          @include bp(xs) {
+            margin-right: 16px;
+          }
         }
       }
     }
     >.optWrapper{
+      border-radius: 5px;
+      &.isFloating{
+        position: absolute;
+        max-height: unset;
+        width: 100%;
+        bottom: auto;
+        >.options{
+          border-radius: 4px;
+          li{
+            &.opt{
+              padding: 10px 15px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
       >.options{
         li{
           padding: 10px 20px;
@@ -160,6 +217,9 @@
     }
   }
   .radio-wrapper{
+    @include bp(xs) {
+      margin-top: 20px;
+    }
     >span{
       display: block;
       margin-bottom: 17px;
@@ -167,6 +227,10 @@
       font-size: 16px;
       line-height: 130%;
       color: #fff;
+      @include bp(xs) {
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
     }
     >div{
       display: flex;
@@ -198,6 +262,9 @@
         line-height: 130%;
         color: $bg-grey;
         padding: 0;
+        @include bp(xs) {
+          font-size: 14px;
+        }
         span{
           display: flex;
           align-items: center;
@@ -220,7 +287,10 @@
     }
   }
   .checkbox-wrapper{
-    margin-top: 30px;
+    margin-top: 10px;
+    @include bp(xs) {
+      margin-top: 20px;
+    }
     input{
       display: none;
       &:checked{
@@ -235,6 +305,9 @@
         font-weight: 400;
         color: $bg-grey;
         margin-bottom: 0;
+        @include bp(xs) {
+          align-items: flex-start;
+        }
         span{
           width: 32px;
           min-width: 32px;
@@ -243,6 +316,9 @@
           border-radius: 5px;
           background-color: #fff;
           margin-right: 11px;
+          @include bp(xs) {
+            margin-top: 2px;
+          }
           &:after{
             content: '';
             border: 3px solid $main;
@@ -262,5 +338,8 @@
   .btn{
     width: 368px;
     margin: 45px auto 0;
+    @include bp(xs) {
+      width: 100%;
+    }
   }
 }

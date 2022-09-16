@@ -46,7 +46,7 @@
                         </div>
                         <div class="consult-form__row">
                             <div class="col">
-                                <div class="radio-wrapper">
+                                <div class="input-wrapper radio-wrapper">
                                     <span>Are you the patient?</span>
                                     <div>
                                         <div class="radio">
@@ -61,7 +61,7 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="radio-wrapper">
+                                <div class="input-wrapper radio-wrapper">
                                     <span>Do you live in NYC area?</span>
                                     <div>
                                         <div class="radio">
@@ -86,11 +86,88 @@
                             </div>
                         </div>
                         <div class="consult-form__row">
-                            <button type="submit" class="btn">Send</button>
+                            <button type="submit" class="btn" data-sending="Sending..." data-error="Error :(" data-sent="Sent">Send</button>
                         </div>
                     </form>
                 </div>
-                <div class="consult-tabs__content consult-tabs__content__yellow tabs-content"></div>
+                <div class="consult-tabs__content consult-tabs__content__yellow tabs-content">
+                    <form class="consult-form ajax_form clear-styles" data-error-title="Sending error!" data-error-message="Please try again later." data-success-title="Thank you for contacting us." data-success-message="We will contact you shortly.">
+                        <div class="consult-form__row">
+                            <div class="col">
+                                <div class="input-wrapper">
+                                    <input class="input" type="text" name="first_name" placeholder="First Name" data-title="First Name">
+                                </div>
+                                <div class="input-wrapper">
+                                    <input class="input" type="text" name="last_name" placeholder="Last Name*" data-title="Last Name" data-validate-required="Required!">
+                                </div>
+                                <div class="input-wrapper">
+                                    <input class="input" type="text" name="phone" placeholder="Phone Number*" data-title="Phone Number" data-validate-required="Required!">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="input-wrapper">
+                                    <input class="input" type="text" name="email" placeholder="Email Address" data-title="Email Address">
+                                </div>
+                                <div class="input-wrapper">
+                                    <select class="select">
+                                        <option selected disabled>Choose the service</option>
+                                        <option>service 1</option>
+                                        <option>service 2</option>
+                                        <option>service 3</option>
+                                        <option>service 4</option>
+                                    </select>
+                                </div>
+                                <div class="input-wrapper">
+                                    <input class="input" type="text" name="message" placeholder="Message*" data-title="Message" data-validate-required="Required!">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="consult-form__row">
+                            <div class="col">
+                                <div class="radio-wrapper">
+                                    <span>Are you a homehealth aid?</span>
+                                    <div>
+                                        <div class="radio">
+                                            <input type="radio" name="aid" id="aid1">
+                                            <label for="aid1"><span></span>Yes</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="aid" id="aid2">
+                                            <label for="aid2"><span></span>No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="radio-wrapper">
+                                    <span>Are you interesting in bringing your patient on-board?</span>
+                                    <div>
+                                        <div class="radio">
+                                            <input type="radio" name="ob" id="ob1">
+                                            <label for="ob1"><span></span>Yes</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="ob" id="ob2">
+                                            <label for="ob2"><span></span>No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="consult-form__row">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox" id="agree2">
+                                <label for="agree2">
+                                    <span></span>
+                                    Angel Care Inc may contact me at this number via calls or texts (including through use of an automatic telephone dialing system) to provide information about or to help me enroll in CDPAP with Angel Care. Your consent is not required to enroll. Message and data rates may apply.
+                                </label>
+                            </div>
+                        </div>
+                        <div class="consult-form__row">
+                            <button type="submit" class="btn" data-sending="Sending..." data-error="Error :(" data-sent="Sent">Send</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

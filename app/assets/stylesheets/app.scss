@@ -32,6 +32,10 @@ body {
     }
   }
 
+  &.sumoStopScroll{
+    overflow: auto;
+  }
+
   &.filters-opened {
     overflow: hidden;
 
@@ -201,9 +205,9 @@ main {
   outline: none !important;
   box-shadow: none !important;
   @include bp(xs) {
-
+    padding: 0 15px;
+    font-size: 14px;
   }
-
   &::placeholder {
     color: $text;
   }
@@ -234,11 +238,16 @@ textarea:-webkit-autofill:hover {
 .validate-error {
   font-family: $default, -apple-system, BlinkMacSystemFont, sans-serif;
   transform: none;
-  width: max-content;
-  left: 0;
-  bottom: -20px;
-  font-size: 10px;
   color: $red;
+  left: 1px;
+  top: 4px;
+  font-size: 14px;
+  padding: 10px 20px;
+  width: calc(100% - 2px);
+  background: #fff;
+  @include bp(xs) {
+    padding: 10px 15px;
+  }
 }
 
 .overlay {

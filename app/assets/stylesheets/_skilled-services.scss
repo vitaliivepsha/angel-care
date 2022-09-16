@@ -8,6 +8,10 @@
     text-align: center;
     padding: 60px 0;
     min-height: 308px;
+    @include bp(xs) {
+      min-height: 272px;
+      padding: 15px 0 55px;
+    }
   }
 }
 
@@ -19,6 +23,9 @@
   max-width: 100%;
   color: #fff;
   margin: 0 auto;
+  @include bp(xs) {
+    font-size: 30px;
+  }
 }
 
 .page-title__after{
@@ -34,22 +41,38 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @include bp(xs) {
+    width: 80px;
+    height: 80px;
+    bottom: -40px;
+  }
   span{
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background-color: #fff;
+    @include bp(xs) {
+      width: 7px;
+      height: 7px;
+    }
   }
 }
 
 .skilled-services__top{
   padding-top: 125px;
   padding-bottom: 35px;
+  @include bp(xs) {
+    padding-top: 100px;
+    padding-bottom: 30px;
+  }
   .section-title{
     width: 720px;
     max-width: 100%;
     text-align: center;
     margin: 0 auto 50px;
+    @include bp(xs) {
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -58,18 +81,28 @@
   box-shadow: 0 4px 20px rgba(64, 64, 64, 0.1);
   border-radius: 10px;
   padding: 60px 95px;
+  @include bp(xs) {
+    padding: 15px 15px 20px;
+  }
   p{
     font-size: 18px;
     line-height: 150%;
     color: #fff;
     text-align: center;
     margin-bottom: 15px;
+    @include bp(xs) {
+      font-size: 14px;
+    }
     &.accent{
       font-weight: 500;
       font-size: 21px;
       line-height: 130%;
       color: $yellow;
       margin-bottom: 25px;
+      @include bp(xs) {
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
     }
     &:last-child{
       margin-bottom: 0;
@@ -86,10 +119,16 @@
   padding: 32px 65px 40px;
   background-color: $main;
   border-radius: 10px;
+  @include bp(xs) {
+    padding: 15px 15px 20px;
+  }
   .section-title{
     text-align: center;
     margin-bottom: 5px;
     color: #fff;
+    @include bp(xs) {
+      margin-bottom: 15px;
+    }
   }
   p{
     font-size: 18px;
@@ -97,6 +136,9 @@
     color: #fff;
     text-align: center;
     margin-bottom: 15px;
+    @include bp(xs) {
+      font-size: 14px;
+    }
     &:last-child{
       margin-bottom: 0;
     }
