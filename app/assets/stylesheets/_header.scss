@@ -284,5 +284,8 @@
 }
 
 .mobile-menu__btn{
-  display: flex;
+  display: none;
+  @include bp(md) {
+    display: flex;
+  }
 }
