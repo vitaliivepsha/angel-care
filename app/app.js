@@ -8,6 +8,7 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/skilled_service_nursing.html');
     require('./assets/templates/layouts/skilled_service_occupational.html');
     require('./assets/templates/layouts/skilled_service_speech.html');
+    require('./assets/templates/layouts/skilled_service_physical_therapy.html');
     require('./assets/templates/layouts/about.html');
     require('./assets/templates/layouts/nhtd-1.html');
 }
