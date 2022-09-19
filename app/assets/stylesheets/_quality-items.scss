@@ -77,6 +77,14 @@
       }
     }
   }
+  &__grey{
+    background-color: #C4C4C4;
+    .btn{
+      &:hover{
+        color: #C4C4C4;
+      }
+    }
+  }
   i{
     height: 60px;
     display: flex;
