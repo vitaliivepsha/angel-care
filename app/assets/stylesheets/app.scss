@@ -32,7 +32,7 @@ body {
     }
   }
 
-  &.sumoStopScroll{
+  &.sumoStopScroll {
     overflow: auto;
   }
 
@@ -92,6 +92,16 @@ svg {
 main {
   flex: 1 0 auto;
   position: relative;
+
+  &.nhtd {
+    & .page-title {
+      width: 100%;
+    }
+
+    & .section-title {
+      width: 100%;
+    }
+  }
 }
 
 .section {
@@ -208,6 +218,7 @@ main {
     padding: 0 15px;
     font-size: 14px;
   }
+
   &::placeholder {
     color: $text;
   }
@@ -302,6 +313,7 @@ textarea:-webkit-autofill:hover {
 // Pages
 @import "about";
 @import "skilled-services";
+@import "nhtd-1";
 
 // Parts
 @import "quality-items";
