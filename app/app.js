@@ -9,6 +9,7 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/skilled_service_occupational.html');
     require('./assets/templates/layouts/skilled_service_speech.html');
     require('./assets/templates/layouts/skilled_service_physical_therapy.html');
+    require('./assets/templates/layouts/contact_us.html');
     require('./assets/templates/layouts/about.html');
     require('./assets/templates/layouts/nhtd-1.html');
 }
@@ -72,6 +73,22 @@ $(function () {
 
     $('.select').change(function () {
         $(this).closest('.input-wrapper').addClass('active');
+    });
+
+    // scroll to id
+
+    $(document).on("click", 'a[href*="#"]', function (e) {
+        var id = $(this).attr("href");
+        var $id = $(id);
+        if ($id.length === 0) {
+            return;
+        }
+        e.preventDefault();
+        var pos = $id.offset().top;
+        $("body, html").animate({ scrollTop: pos }, 500);
+    });
+    $(document).on("click", 'a[href*="#"]', function (e) {
+        e.preventDefault();
     });
 
     // mobile menu
