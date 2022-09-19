@@ -96,6 +96,7 @@ main {
   &.nhtd {
     & .page-title {
       width: 100%;
+      padding: 0 15px;
     }
 
     & .section-title {
@@ -314,6 +315,7 @@ textarea:-webkit-autofill:hover {
 @import "about";
 @import "skilled-services";
 @import "nhtd-1";
+@import "nhtd-2";
 
 // Parts
 @import "quality-items";
