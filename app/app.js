@@ -10,6 +10,8 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/skilled_service_speech.html');
     require('./assets/templates/layouts/skilled_service_physical_therapy.html');
     require('./assets/templates/layouts/contact_us.html');
+    require('./assets/templates/layouts/resources.html');
+    require('./assets/templates/layouts/resources_information_for_patients.html');
     require('./assets/templates/layouts/about.html');
     require('./assets/templates/layouts/nhtd_1.html');
     require('./assets/templates/layouts/nhtd_2.html');
@@ -93,6 +95,12 @@ $(function () {
     });
     $(document).on("click", 'a[href*="#"]', function (e) {
         e.preventDefault();
+    });
+
+    // accordion
+
+    $('.accordion-head').on('click', function () {
+        $(this).closest('.accordion-item').toggleClass('active').find('.accordion-body').slideToggle('300');
     });
 
     // mobile menu

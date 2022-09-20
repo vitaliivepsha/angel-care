@@ -41,10 +41,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 7px;
   @include bp(xs) {
     width: 80px;
     height: 80px;
     bottom: -40px;
+    padding: 5px;
   }
   span{
     width: 10px;
@@ -54,6 +56,17 @@
     @include bp(xs) {
       width: 7px;
       height: 7px;
+    }
+  }
+  img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: calc(100% - 14px);
+    object-fit: contain;
+    @include bp(xs) {
+      max-width: calc(100% - 10px);
     }
   }
 }
