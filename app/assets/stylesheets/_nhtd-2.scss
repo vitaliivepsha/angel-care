@@ -67,7 +67,7 @@
   &:before {
     content: "";
     position: absolute;
-    left: 100%;
+    left: calc(100% - 1px);
     width: 100vw;
     height: 100%;
     background-color: $yellow;
@@ -81,7 +81,9 @@
   display: flex;
   align-items: center;
   height: 150px;
+  margin-left: 15px;
   padding: 20px;
+  padding-right: 46px;
   padding-left: 54px;
   background: $yellow;
   box-shadow: 0px 4px 20px rgba(64, 64, 64, 0.1);
@@ -92,6 +94,7 @@
   text-align: center;
   color: #FFFFFF;
   @include bp(lg) {
+
     height: 100px;
     font-size: 34px;
   }
@@ -205,13 +208,13 @@
 
 .nhtd-offers-coordination {
   margin-bottom: 55px;
+  @include bp(xs) {
+    margin-bottom: 28px;
+    }
 }
 
 .nhtd-offers-coordination__inner {
   margin-bottom: 30px;
-}
-
-.nhtd-offers-coordination__inner {
   padding: 60px 65px;
   padding-bottom: 43px;
   background: #06849B;
@@ -219,6 +222,14 @@
   border-radius: 10px;
   @include bp(md) {
     padding: 60px 30px;
+  }
+  @include bp(sm) {
+    padding: 60px 20px;
+  }
+  @include bp(xs) {
+    margin-bottom: 20px;
+    padding: 14px 10px;
+    padding-bottom: 18px;
   }
 }
 
@@ -230,6 +241,11 @@
   line-height: 130%;
   text-align: center;
   color: #FFFFFF;
+  @include bp(xs) {
+    margin-bottom: 8px;
+    font-size: 30px;
+    line-height: 130%;
+  }
 }
 
 .nhtd-offers-coordination__subtitle {
@@ -240,6 +256,11 @@
   line-height: 150%;
   text-align: center;
   color: $yellow;
+  @include bp(xs) {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 150%;
+  }
 }
 
 .nhtd-offers-coordination__text {
@@ -250,6 +271,11 @@
   font-size: 18px;
   line-height: 150%;
   color: #FFFFFF;
+  @include bp(xs) {
+    margin-bottom: 18px;
+    font-size: 14px;
+    line-height: 150%;
+  }
 }
 
 .coordination-list {
@@ -258,23 +284,35 @@
   max-width: 863px;
   margin: 0 auto;
   margin-bottom: 20px;
+  @include bp(xs) {
+    margin-bottom: 10px;
+  }
 
   &:before {
     content: "";
     position: absolute;
     top: 50px;
-    bottom: 50px;
+    bottom: 90px;
     left: 61px;
     width: 3px;
     background-color: #fff;
+    @include bp(xs) {
+      display: none;
+    }
   }
 
   & li {
     display: flex;
     align-items: center;
+    @include bp(xs) {
+      display: block;
+    }
 
     & + li {
       margin-top: 14px;
+      @include bp(xs) {
+        margin-top: 9px;
+      }
     }
   }
 
@@ -324,6 +362,18 @@
     @include bp(md) {
       margin-right: 25px;
     }
+    @include bp(sm) {
+      margin-right: 20px;
+    }
+    @include bp(xs) {
+      width: 85px;
+      height: 85px;
+      margin: 0 auto;
+      margin-bottom: 23px;
+      font-size: 40px;
+      line-height: 150%;
+      border: 1px solid #FFFFFF;
+    }
 
     &:before {
       content: "";
@@ -336,6 +386,22 @@
       height: 94px;
       border-radius: 50%;
       background-color: #000;
+      @include bp(xs) {
+        width: 65px;
+        height: 65px;
+      }
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: calc(100% - 10px);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -2;
+      width: 1px;
+      height: 30px;
+      background-color: #fff;
     }
 
   }
@@ -345,10 +411,15 @@
     font-size: 18px;
     line-height: 150%;
     color: #FFFFFF;
-      @include bp(md) {
-        font-size: 16px;
-        line-height: 130%;
-        }
+    @include bp(md) {
+      font-size: 16px;
+      line-height: 130%;
+    }
+    @include bp(xs) {
+      text-align: center;
+      font-size: 14px;
+      line-height: 150%;
+    }
   }
 }
 
@@ -362,6 +433,11 @@
   line-height: 130%;
   text-align: center;
   color: #FFFFFF;
+  @include bp(xs) {
+    margin-bottom: 6px;
+    font-size: 30px;
+    line-height: 130%;
+  }
 }
 
 .questions-list {
@@ -374,6 +450,10 @@
     font-size: 18px;
     line-height: 150%;
     color: #FFFFFF;
+    @include bp(xs) {
+      font-size: 14px;
+      line-height: 150%;
+    }
 
     &:before {
       content: "";
@@ -401,10 +481,16 @@
   background-color: $yellow;
   border-radius: 5px;
 
+
   & span {
     font-weight: 400;
     font-size: 18px;
     line-height: 130%;
     color: #FFFFFF;
+    text-align: center;
+    @include bp(xs) {
+      font-size: 16px;
+      line-height: 130%;
+    }
   }
 }

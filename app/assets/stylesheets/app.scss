@@ -101,6 +101,9 @@ main {
 
     & .section-title {
       width: 100%;
+      & b {
+        color: $yellow;
+      }
     }
   }
 }
@@ -317,6 +320,9 @@ textarea:-webkit-autofill:hover {
 @import "contact-us";
 @import "nhtd-1";
 @import "nhtd-2";
+@import "nhtd-3";
+@import "nhtd-4";
+@import "nhtd-5";
 
 // Parts
 @import "quality-items";

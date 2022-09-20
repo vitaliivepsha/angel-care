@@ -1,0 +1,140 @@
+.waiver-section {
+  margin-top: 153px;
+  margin-bottom: 53px;
+  @include bp(xs) {
+    margin-top: 110px;
+    margin-bottom: 28px;
+    }
+}
+
+.waiver__wrapper {
+  position: relative;
+  padding-bottom: 132px;
+  @include bp(sm) {
+    padding-bottom: 52px;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+
+    & > svg {
+      display: none;
+    }
+  }
+
+  & > svg {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+    @include bp(sm) {
+      bottom: 30px;
+    }
+    @include bp(xs) {
+      bottom: 10px;
+      width: 12px;
+      }
+  }
+}
+
+.waiver-item {
+  background: $main;
+  box-shadow: 0px 4px 20px rgba(64, 64, 64, 0.1);
+  border-radius: 10px;
+}
+
+.waiver-item__head {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  transition: all ease-in-out 0.5s;
+  cursor: pointer;
+  @include bp(md) {
+    padding: 35px;
+  }
+  @include bp(sm) {
+    padding: 20px;
+  }
+  @include bp(xs) {
+    padding: 12px;
+    padding-top: 25px;
+    padding-right: 10px;
+    padding-bottom: 24px;
+  }
+
+  &.active {
+    padding-bottom: 20px;
+    transition: all ease-in-out 0.5s;
+
+    & i:nth-of-type(2) {
+      transform: rotate(180deg);
+      transition: all ease-in-out 0.4s;
+    }
+  }
+
+  & i:nth-of-type(1) {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 180px;
+    @include bp(md) {
+      width: 100px;
+      margin-right: 30px;
+    }
+    @include bp(xs) {
+      width: 30px;
+      margin-right: 12px;
+    }
+
+    & svg {
+      height: auto;
+    }
+  }
+
+  & span {
+    padding-right: 50px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 130%;
+    color: #FFFFFF;
+    @include bp(md) {
+      padding-right: 30px;
+      font-size: 34px;
+    }
+    @include bp(xs) {
+      padding-right: 9px;
+      font-size: 16px;
+      line-height: 130%;
+    }
+  }
+
+  & i:nth-of-type(2) {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    transition: all ease-in-out 0.4s;
+    @include bp(xs) {
+      width: 15px;
+    }
+  }
+}
+
+.waiver-item__body {
+  display: none;
+  padding: 0 72px 42px 230px;
+  @include bp(md) {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  & p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #FFFFFF;
+  }
+}

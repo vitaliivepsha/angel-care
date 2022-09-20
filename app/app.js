@@ -13,6 +13,9 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/about.html');
     require('./assets/templates/layouts/nhtd_1.html');
     require('./assets/templates/layouts/nhtd_2.html');
+    require('./assets/templates/layouts/nhtd_3.html');
+    require('./assets/templates/layouts/nhtd_4.html');
+    require('./assets/templates/layouts/nhtd_5.html');
 }
 
 // Depends
@@ -86,7 +89,7 @@ $(function () {
         }
         e.preventDefault();
         var pos = $id.offset().top;
-        $("body, html").animate({ scrollTop: pos }, 500);
+        $("body, html").animate({scrollTop: pos}, 500);
     });
     $(document).on("click", 'a[href*="#"]', function (e) {
         e.preventDefault();
@@ -187,6 +190,12 @@ $(function () {
         $(this)
             .addClass('active').siblings().removeClass('active')
             .closest('.tabs-wrapper').find('.tabs-content').removeClass('active').eq($(this).index()).addClass('active');
+    });
+
+    // spoiler
+
+    $(".spoiler-head").click(function () {
+        $(this).toggleClass("active").next(".spoiler-body").slideToggle();
     });
 
     // map
