@@ -1,0 +1,229 @@
+.nhtd-program {
+  position: relative;
+  margin-bottom: 54px;
+  overflow: hidden;
+  @include bp(xs) {
+    margin-bottom: 27px;
+  }
+
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 124px;
+    height: 517px;
+    width: calc(100vw - 523px);
+    background-color: $main;
+    z-index: -1;
+    border-radius: 0 10px 10px 0;
+    @include bp(xs) {
+      display: none;
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 142px;
+    z-index: -2;
+    height: 610px;
+    right: 0;
+    width: calc(100vw - 134px);
+    background-color: $bg-grey;
+    border-radius: 10px 0 0 10px;
+    @include bp(xs) {
+      top: 99px;
+      bottom: 0;
+      height: unset;
+      width: 100vw;
+      border-radius: 0;
+      background-color: $bg-grey;
+    }
+  }
+
+  & .container {
+    @include bp(xs) {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.nhtd.skilled-services__top {
+  padding-top: 97px;
+  margin-bottom: 36px;
+  @include bp(xs) {
+    margin-bottom: 39px;
+  }
+
+  & .section-title {
+    margin: 0 auto 60px;
+    @include bp(xs) {
+      margin: 0 auto 73px;
+    }
+  }
+
+  & .skilled-services__top-descr {
+    padding: 37px 67px;
+
+    & .accent {
+      font-size: 18px;
+      @include bp(xs) {
+        font-size: 14px;
+      }
+    }
+
+    @include bp(xs) {
+      padding: 16px 16px;
+    }
+  }
+}
+
+
+.nhtd-program__inner {
+  position: relative;
+  margin-top: -82px;
+  padding: 111px 48px 81px 110px;
+  background: $green;
+  box-shadow: 0px 4px 20px rgba(64, 64, 64, 0.1);
+  border-radius: 10px;
+  @include bp(lg) {
+    margin-top: -40px;
+    padding: 111px 35px 81px 35px;
+  }
+  @include bp(md) {
+    margin-top: -20px;
+  }
+  @include bp(xs) {
+    margin-top: 0;
+    padding: 50px 10px 19px 10px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  & i {
+    position: absolute;
+    left: 50%;
+    top: -90px;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 220px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: $green;
+    @include bp(sm) {
+      top: -60px;
+      width: 150px;
+      height: 150px;
+    }
+    @include bp(xs) {
+      top: -40px;
+      width: 110px;
+      height: 110px;
+    }
+
+    & svg {
+      @include bp(sm) {
+        width: 80px;
+      }
+      @include bp(xs) {
+        width: 50px;
+      }
+    }
+  }
+}
+
+.nhtd-program__title {
+  position: relative;
+  display: block;
+  margin-bottom: 27px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 130%;
+  text-align: center;
+  color: #FFFFFF;
+  @include bp(xs) {
+    margin-bottom: 15px;
+    font-size: 30px;
+    line-height: 130%;
+  }
+
+}
+
+.nhtd-program__list {
+  column-count: 2;
+  @include bp(xs) {
+    padding-left: 5px;
+    column-count: 1;
+  }
+
+  & li {
+    display: flex;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 180%;
+    color: #FFFFFF;
+    @include bp(xs) {
+      font-size: 14px;
+      line-height: 150%;
+    }
+
+    &:before {
+      content: "";
+      flex-shrink: 0;
+      margin-top: 14px;
+      margin-right: 12px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: #fff;
+      @include bp(xs) {
+        width: 4px;
+        height: 4px;
+        margin-right: 10px;
+        margin-top: 9px;
+      }
+    }
+  }
+}
+
+.nhtd-program__pic {
+  width: 100%;
+  max-width: 1614px;
+  display: flex;
+  justify-content: end;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  & div {
+    max-width: 1158px;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    @include bp(xs) {
+      border-radius: 10px 10px 0 0;
+    }
+
+    & img:nth-child(1) {
+      @include bp(xs) {
+        display: none;
+      }
+    }
+
+    & img:nth-child(2) {
+      display: none;
+      @include bp(xs) {
+        display: block;
+      }
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+}
