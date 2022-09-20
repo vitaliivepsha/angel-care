@@ -10,6 +10,7 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/skilled_service_speech.html');
     require('./assets/templates/layouts/skilled_service_physical_therapy.html');
     require('./assets/templates/layouts/contact_us.html');
+    require('./assets/templates/layouts/resources.html');
     require('./assets/templates/layouts/about.html');
     require('./assets/templates/layouts/nhtd-1.html');
 }
