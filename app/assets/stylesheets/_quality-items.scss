@@ -25,6 +25,10 @@
   @include bp(xs) {
     margin-bottom: -20px;
   }
+  &.three-in-row{
+    margin-left: 0;
+    margin-right: 0;
+  }
   .col{
     width: 285px;
     padding: 0 15px;
@@ -85,6 +89,14 @@
       }
     }
   }
+  &__blue{
+    background-color: $main;
+    .btn{
+      &:hover{
+        color: $main;
+      }
+    }
+  }
   i{
     height: 60px;
     display: flex;
@@ -99,8 +111,10 @@
     font-weight: 700;
     font-size: 21px;
     line-height: 130%;
+    margin: 0 -20px;
     @include bp(xs) {
       height: 72px;
+      margin: 0 -5px;
     }
   }
   .btn{

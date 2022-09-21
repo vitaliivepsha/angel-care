@@ -13,6 +13,7 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/resources.html');
     require('./assets/templates/layouts/resources_information_for_patients.html');
     require('./assets/templates/layouts/cdpap.html');
+    require('./assets/templates/layouts/how_to_become_a_caregiver.html');
     require('./assets/templates/layouts/about.html');
     require('./assets/templates/layouts/nhtd_1.html');
     require('./assets/templates/layouts/nhtd_2.html');
@@ -102,6 +103,29 @@ $(function () {
 
     $('.accordion-head').on('click', function () {
         $(this).closest('.accordion-item').toggleClass('active').find('.accordion-body').slideToggle('300');
+    });
+
+    // reviews
+
+    $('.text-testimonial__item-txt').each(function () {
+        var full_txt = $(this).html(),
+            $btn = $(this).closest('.text-testimonial__item-top').find('.text-testimonial__item-txt__more');
+        $(this).succinct({
+            size: 420
+        });
+        var truncated_txt = $(this).succinct({
+            size: 420
+        }).html();
+        if (truncated_txt.indexOf('...') > 0){
+            $btn.addClass('active');
+        }
+        $btn.click(function() {
+            $(this).hide().closest('.text-testimonial__item-top').find('.text-testimonial__item-txt').html(full_txt);
+        });
+    });
+
+    $('.review-text__more').click(function() {
+        $(this).hide().closest('.review-text__wrapper').find('.review-text').css({'height': 'auto', 'max-height': 'unset'});
     });
 
     // mobile menu

@@ -295,6 +295,11 @@
       display: none;
       &:checked{
         +label{
+          span{
+            &:after{
+              display: block;
+            }
+          }
         }
       }
       +label{
@@ -305,6 +310,7 @@
         font-weight: 400;
         color: $bg-grey;
         margin-bottom: 0;
+        cursor: pointer;
         @include bp(xs) {
           align-items: flex-start;
         }
@@ -320,6 +326,7 @@
             margin-top: 2px;
           }
           &:after{
+            display: none;
             content: '';
             border: 3px solid $main;
             border-top: none;
