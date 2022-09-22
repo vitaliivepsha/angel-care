@@ -17,11 +17,17 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/how_to_become_a_caregiver.html');
     require('./assets/templates/layouts/how_can_i_care_for_a_family_member.html');
     require('./assets/templates/layouts/about.html');
+    require('./assets/templates/layouts/about_benefits.html');
     require('./assets/templates/layouts/nhtd_1.html');
     require('./assets/templates/layouts/nhtd_2.html');
     require('./assets/templates/layouts/nhtd_3.html');
     require('./assets/templates/layouts/nhtd_4.html');
     require('./assets/templates/layouts/nhtd_5.html');
+    require('./assets/templates/layouts/nhtd_6.html');
+    require('./assets/templates/layouts/testimonials.html');
+    require('./assets/templates/layouts/testimonials_patients.html');
+    require('./assets/templates/layouts/testimonials_caregivers.html');
+
 }
 
 // Depends
@@ -118,16 +124,19 @@ $(function () {
         var truncated_txt = $(this).succinct({
             size: 420
         }).html();
-        if (truncated_txt.indexOf('...') > 0){
+        if (truncated_txt.indexOf('...') > 0) {
             $btn.addClass('active');
         }
-        $btn.click(function() {
+        $btn.click(function () {
             $(this).hide().closest('.text-testimonial__item-top').find('.text-testimonial__item-txt').html(full_txt);
         });
     });
 
-    $('.review-text__more').click(function() {
-        $(this).hide().closest('.review-text__wrapper').find('.review-text').css({'height': 'auto', 'max-height': 'unset'});
+    $('.review-text__more').click(function () {
+        $(this).hide().closest('.review-text__wrapper').find('.review-text').css({
+            'height': 'auto',
+            'max-height': 'unset'
+        });
     });
 
     // mobile menu
