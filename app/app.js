@@ -13,6 +13,7 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/resources.html');
     require('./assets/templates/layouts/resources_information_for_patients.html');
     require('./assets/templates/layouts/cdpap.html');
+    require('./assets/templates/layouts/forms.html');
     require('./assets/templates/layouts/how_to_become_a_caregiver.html');
     require('./assets/templates/layouts/about.html');
     require('./assets/templates/layouts/nhtd_1.html');
