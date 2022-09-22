@@ -1,7 +1,10 @@
 .nhtd-eligible {
   .container {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1430px;
+    @include bp(xs) {
+      margin-top: -70px;
+      }
   }
 }
 
@@ -14,6 +17,10 @@
     flex-direction: column;
     gap: 10px;
   }
+  @include bp(xs) {
+    gap: 0;
+    margin-bottom: 30px;
+    }
 
   &:nth-child(even) {
     @media (min-width: 992px) {
@@ -21,8 +28,6 @@
         order: 1;
       }
     }
-
-
   }
 }
 
@@ -32,6 +37,9 @@
   @include bp(md) {
     width: 100%;
   }
+  @include bp(xs) {
+    margin-bottom: 5px;
+    }
 
   & div {
     width: 100%;
@@ -65,11 +73,20 @@
     font-size: 18px;
     line-height: 150%;
     color: #06849B;
+    @include bp(xs) {
+      margin: 10px 0;
+      font-size: 14px;
+      line-height: 150%;
+    }
+
   }
 
   & ul {
     list-style-type: disc;
     padding-left: 30px;
+    @include bp(xs) {
+      padding-left: 25px;
+      }
   }
 
   & .accent {

@@ -1,0 +1,147 @@
+.testimonials {
+  margin-top: 123px;
+  margin-bottom: 34px;
+}
+
+.testimonials-btn {
+  margin-bottom: 70px;
+
+  & + .video-testimonials {
+    margin-bottom: 81px;
+  }
+
+  & .btn {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    background-color: $main;
+    color: #fff;
+
+    &:hover {
+      background-color: $yellow;
+    }
+  }
+}
+
+.testimonials__links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  @include bp(sm) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 71px;
+  }
+}
+
+.testimonials__links-item {
+  position: relative;
+  box-shadow: 0px 4px 20px rgba(64, 64, 64, 0.1);
+  border-radius: 10px;
+  padding: 149px 23px 86px 23px;
+  @include bp(md) {
+    padding: 120px 15px 46px 15px;
+  }
+  @include bp(xs) {
+    padding: 86px 15px 20px 15px;
+  }
+
+  &:nth-child(1) {
+    background-color: $main;
+
+    & i {
+      background-color: $main;
+    }
+  }
+
+  &:nth-child(2) {
+    background-color: $yellow;
+
+    & i {
+      background-color: $yellow;
+    }
+  }
+
+  & i {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    @include bp(xs) {
+      top: -32px;
+      width: 76px;
+      height: 76px;
+    }
+
+    & svg {
+      margin-bottom: 8px;
+      margin-left: 5px;
+      @include bp(xs) {
+        margin-bottom: unset;
+        margin-left: 6px;
+        height: 42px;
+      }
+    }
+  }
+
+  & span {
+    position: relative;
+    z-index: 1;
+    display: block;
+    max-width: 330px;
+    margin: 0 auto;
+    margin-bottom: 94px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 130%;
+    text-align: center;
+    color: #FFFFFF;
+    @include bp(xs) {
+      margin-bottom: 60px;
+    }
+    @include bp(sm) {
+      margin-bottom: 63px;
+    }
+    @include bp(xs) {
+      margin-bottom: 39px;
+      font-size: 21px;
+      line-height: 130%;
+    }
+  }
+
+  & .btn {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  & > svg {
+    position: absolute;
+    top: 48px;
+    right: 54px;
+    @include bp(md) {
+      right: 33px;
+    }
+    @include bp(xs) {
+      top: 14px;
+      right: 21px;
+      width: 40px;
+    }
+  }
+
+}
+
+
+
