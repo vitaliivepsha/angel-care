@@ -28,6 +28,10 @@
   &.three-in-row{
     margin-left: 0;
     margin-right: 0;
+    @include bp(xs) {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
   }
   .col{
     width: 285px;
@@ -114,7 +118,7 @@
     margin: 0 -20px;
     @include bp(xs) {
       height: 72px;
-      margin: 0 -5px;
+      margin: 0;
     }
   }
   .btn{
