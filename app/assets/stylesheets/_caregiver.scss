@@ -1,10 +1,16 @@
 .caregiver-main{
   margin-bottom: 80px;
   overflow: hidden;
+  @include bp(xs) {
+    margin-bottom: 70px;
+  }
 }
 
 .caregiver-main__top{
   padding: 125px 0 70px;
+  @include bp(xs) {
+    padding-top: 100px;
+  }
   .section-title{
     text-align: center;
   }
@@ -13,17 +19,31 @@
 .caregiver-main__bot{
   position: relative;
   height: 723px;
+  @include bp(md) {
+    height: auto;
+    padding-bottom: 60px;
+    background-color: $bg-grey;
+  }
+  @include bp(xs) {
+    padding-bottom: 20px;
+  }
   &:before{
     position: absolute;
     content: '';
     background: $bg-grey;
     width: 100%;
     height: 636px;
+    @include bp(md) {
+      display: none;
+    }
   }
   >.container{
     position: relative;
     z-index: 1;
     padding-top: 226px;
+    @include bp(md) {
+      padding-top: 0;
+    }
   }
 }
 
@@ -35,7 +55,9 @@
   left: 325px;
   border-radius: 10px;
   overflow: hidden;
-  @include bp(lg) {
+  @include bp(md) {
+    position: relative;
+    top: auto;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 0;
@@ -55,7 +77,7 @@
     mix-blend-mode: lighten;
     opacity: 0.5;
     border-radius: 10px;
-    @include bp(lg) {
+    @include bp(md) {
       border-radius: 0;
     }
   }
@@ -85,10 +107,20 @@
   color: #fff;
   text-align: center;
   padding: 40px 30px;
+  @include bp(md) {
+    margin: -60px auto 0;
+  }
+  @include bp(xs) {
+    margin-top: -30px;
+    padding: 20px 10px;
+  }
   p{
     font-size: 18px;
     line-height: 150%;
     margin-bottom: 10px;
+    @include bp(xs) {
+      font-size: 14px;
+    }
     &:last-child{
       margin-bottom: 0;
     }
@@ -103,10 +135,17 @@
   background-color: $green;
   color: #fff;
   padding: 50px 0 60px;
+  @include bp(xs) {
+    padding: 15px 0 20px;
+    margin-bottom: 70px;
+  }
   .section-title{
     color: #fff;
     text-align: center;
     margin-bottom: 50px;
+    @include bp(xs) {
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -118,6 +157,10 @@
   line-height: 150%;
   color: #fff;
   margin-bottom: 50px;
+  @include bp(xs) {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
 }
 
 .caregiver-why__list{
@@ -129,15 +172,36 @@
   font-size: 18px;
   line-height: 150%;
   color: #fff;
+  @include bp(xs) {
+    font-size: 14px;
+    margin-bottom: -20px;
+  }
   li{
     width: 50%;
     padding: 0 25px;
     margin-bottom: 60px;
     display: flex;
+    @include bp(sm) {
+      padding: 0 15px;
+    }
+    @include bp(xs) {
+      width: 100%;
+      padding: 0;
+      margin-bottom: 18px;
+    }
     svg{
       min-width: 29px;
       margin-right: 25px;
       margin-top: 5px;
+      @include bp(sm) {
+        margin-right: 15px;
+      }
+      @include bp(xs) {
+        width: 25px;
+        height: 25px;
+        min-width: 25px;
+        margin-right: 25px;
+      }
     }
   }
 }
@@ -146,6 +210,16 @@
   background-color: $bg-grey;
   padding: 145px 0 125px;
   margin-bottom: 55px;
+  @include bp(sm) {
+    padding: 60px 0;
+  }
+  @include bp(xs) {
+    padding: 100px 0;
+    margin-bottom: 40px;
+  }
+  @include bp(xxs) {
+    padding: 70px 0;
+  }
 }
 
 .caregiver-jobs__wrapper {
@@ -164,6 +238,22 @@
   color: $main;
   padding: 80px;
   text-align: center;
+  @include bp(md) {
+    transform: scale(.7);
+  }
+  @include bp(sm) {
+    transform: scale(.6);
+  }
+  @include bp(xs) {
+    transform: scale(1.2);
+    width: 156px;
+    height: 156px;
+    padding: 32px;
+    font-size: 14px;
+  }
+  @include bp(xxs) {
+    transform: none;
+  }
 }
 
 .caregiver-jobs__item{
@@ -176,6 +266,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @include bp(xs) {
+    width: 42px;
+    height: 42px;
+  }
   >i{
     display: flex;
     align-items: center;
@@ -184,24 +278,38 @@
     height: 95px;
     border-radius: 50%;
     padding: 18px;
+    @include bp(xs) {
+      width: 32px;
+      height: 32px;
+      padding: 6px;
+    }
     svg{
       max-width: 100%;
       max-height: 100%;
     }
   }
   >span{
+    display: block;
     position: absolute;
     font-weight: 400;
     font-size: 18px;
     line-height: 150%;
     color: $main;
     text-align: left;
+    @include bp(xs) {
+      font-size: 10px;
+      text-align: center;
+      line-height: 120%;
+    }
   }
   &.item1 {
     border-color: $yellow;
     top: -67px;
     left: 50%;
     transform: translateX(-50%);
+    @include bp(xs) {
+      top: -22px;
+    }
     >i{
       background-color: $yellow;
     }
@@ -210,12 +318,20 @@
       left: 50%;
       transform: translateX(-50%);
       bottom: calc(100% + 10px);
+      @include bp(xs) {
+        width: 110px;
+        bottom: calc(100% + 3px);
+      }
     }
   }
   &.item2 {
     border-color: $red;
     top: -16px;
     left: 30px;
+    @include bp(xs) {
+      top: -5px;
+      left: 10px;
+    }
     >i{
       background-color: $red;
     }
@@ -223,12 +339,22 @@
       width: 200px;
       right: calc(100% + 18px);
       top: 12px;
+      @include bp(xs) {
+        width: 118px;
+        right: 0;
+        top: auto;
+        bottom: calc(100% + 2px);
+      }
     }
   }
   &.item3 {
     border-color: $purple;
     top: -16px;
     right: 30px;
+    @include bp(xs) {
+      top: -5px;
+      right: 10px;
+    }
     >i{
       background-color: $purple;
     }
@@ -236,12 +362,21 @@
       width: max-content;
       left: calc(100% + 27px);
       top: 40px;
+      @include bp(xs) {
+        left: 19px;
+        top: auto;
+        bottom: calc(100% + 3px);
+      }
     }
   }
   &.item4 {
     border-color: $main;
     top: 121px;
     left: -56px;
+    @include bp(xs) {
+      top: 40px;
+      left: -18px;
+    }
     >i{
       background-color: $main;
     }
@@ -249,12 +384,22 @@
       width: 152px;
       right: calc(100% + 24px);
       top: 36px;
+      @include bp(xs) {
+        width: 75px;
+        right: 14px;
+        top: auto;
+        bottom: calc(100% + 2px);
+      }
     }
   }
   &.item5 {
     border-color: $green;
     top: 121px;
     right: -56px;
+    @include bp(xs) {
+      top: 40px;
+      right: -18px;
+    }
     >i{
       background-color: $green;
     }
@@ -263,12 +408,23 @@
       left: calc(100% + 33px);
       top: 50%;
       transform: translateY(-50%);
+      @include bp(xs) {
+        width: 78px;
+        left: 14px;
+        top: auto;
+        transform: none;
+        bottom: calc(100% + 2px);
+      }
     }
   }
   &.item6 {
     border-color: $green;
     top: 274px;
     left: -30px;
+    @include bp(xs) {
+      top: 92px;
+      left: -10px;
+    }
     >i{
       background-color: $green;
     }
@@ -277,12 +433,20 @@
       right: calc(100% + 30px);
       top: 50%;
       transform: translateY(-50%);
+      @include bp(xs) {
+        width: 46px;
+        right: calc(100% + 4px);
+      }
     }
   }
   &.item7 {
     border-color: $main;
     top: 274px;
     right: -30px;
+    @include bp(xs) {
+      top: 92px;
+      right: -10px;
+    }
     >i{
       background-color: $main;
     }
@@ -290,12 +454,21 @@
       width: 170px;
       left: calc(100% + 42px);
       top: 45px;
+      @include bp(xs) {
+        width: 80px;
+        left: 18px;
+        top: calc(100% - 3px);
+      }
     }
   }
   &.item8 {
     border-color: $purple;
     top: 383px;
     left: 83px;
+    @include bp(xs) {
+      top: 128px;
+      left: 27px;
+    }
     >i{
       background-color: $purple;
     }
@@ -303,12 +476,21 @@
       width: 230px;
       right: 100%;
       top: 88px;
+      @include bp(xs) {
+        width: 92px;
+        right: 7px;
+        top: calc(100% - 1px);
+      }
     }
   }
   &.item9 {
     border-color: $red;
     top: 383px;
     right: 83px;
+    @include bp(xs) {
+      top: 128px;
+      right: 27px;
+    }
     >i{
       background-color: $red;
     }
@@ -316,12 +498,20 @@
       width: max-content;
       left: calc(100% + 18px);
       top: 80px;
+      @include bp(xs) {
+        width: 78px;
+        left: -6px;
+        top: calc(100% + 2px);
+      }
     }
   }
 }
 
 .caregiver-interested{
   padding: 35px 0;
+  @include bp(xs) {
+    padding: 30px 0;
+  }
 }
 
 .caregiver-interested__wrapper{
@@ -333,11 +523,20 @@
   padding: 70px;
   position: relative;
   z-index: 1;
+  @include bp(xs) {
+    padding: 20px 10px;
+  }
+  @include bp(xxs) {
+    padding: 20px 8px;
+  }
   .section-title{
     color: #fff;
     width: 470px;
     max-width: 100%;
     margin: 0 auto 25px;
+    @include bp(xs) {
+      margin-bottom: 15px;
+    }
   }
   p{
     font-size: 18px;
@@ -345,6 +544,11 @@
     width: 570px;
     max-width: 100%;
     margin: 0 auto 15px;
+    @include bp(xs) {
+      font-size: 14px;
+      width: 275px;
+      margin: 0 auto 10px;
+    }
     &:last-child{
       margin-bottom: 0;
     }
@@ -373,9 +577,15 @@
 
 .caregiver-testimonials{
   padding: 55px 0 35px;
+  @include bp(xs) {
+    padding: 30px 0;
+  }
   .section-title{
     text-align: center;
     margin-bottom: 35px;
+    @include bp(xs) {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -385,167 +595,13 @@
     max-width: 100%;
     margin: 70px auto 0;
     filter: drop-shadow(0px 4px 20px rgba(64, 64, 64, 0.1));
+    @include bp(xs) {
+      margin-top: 20px;
+      width: 100%;
+    }
     &:hover{
       background-color: $main;
       border-color: $main;
     }
   }
-}
-
-.video-testimonials{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  .col{
-    width: 380px;
-    padding: 0 15px;
-    margin-bottom: 30px;
-    @include bp(xs) {
-      margin-bottom: 20px;
-      width: 100%;
-    }
-  }
-}
-
-.video-testimonial__item{
-  position: relative;
-  border-radius: 10px;
-  width: 100%;
-  height: 290px;
-  overflow: hidden;
-  filter: drop-shadow(0px 4px 20px rgba(64, 64, 64, 0.1));
-  cursor: pointer;
-  &:after{
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background-color: $main;
-    mix-blend-mode: lighten;
-    opacity: 0.5;
-    border-radius: 10px;
-  }
-  &:hover{
-    .btn{
-      background-color: $main;
-      border-color: $main;
-      svg{
-        path{
-          +path{
-            fill: $main
-          }
-        }
-      }
-    }
-  }
-  img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .btn{
-    position: absolute;
-    width: 270px;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 23px;
-    background-color: $yellow;
-    border-color: $yellow;
-    color: #fff;
-    z-index: 1;
-    svg{
-      margin-right: 12px;
-    }
-  }
-}
-
-.text-testimonials{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.text-testimonial__item{
-  position: relative;
-  min-height: 320px;
-  height: 100%;
-  border-radius: 10px;
-  background-color: $bg-grey;
-  padding: 30px 65px 30px 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  >svg{
-    position: absolute;
-    right: 34px;
-    bottom: 30px;
-  }
-}
-
-.text-testimonial__item-title{
-  display: block;
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 130%;
-  margin-bottom: 20px;
-  color: $main;
-}
-
-.text-testimonial__item-txt__wrapper{
-  font-size: 16px;
-  line-height: 130%;
-  color: $text;
-}
-
-.text-testimonial__item-txt{
-  margin-bottom: 0;
-  font-size: 16px;
-  line-height: 130%;
-  color: $text;
-  display: inline;
-}
-
-.text-testimonial__item-txt__more{
-  font-size: 12px;
-  line-height: 130%;
-  color: rgba($main, .7);
-  text-decoration-line: underline;
-  transition: linear .2s;
-  cursor: pointer;
-  visibility: hidden;
-  opacity: 0;
-  &:hover{
-    color: $yellow;
-  }
-  &.active{
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
-.text-testimonial__item-bot{
-  margin-top: 30px;
-  display: flex;
-  align-items: flex-end;
-}
-
-.text-testimonial__item-author{
-  display: flex;
-  align-items: flex-end;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 130%;
-  color: $main;
-  svg{
-    margin-right: 9px;
-  }
-}
-
-.text-testimonial__item-address{
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 130%;
-  color: rgba($text, .7);
-  margin-left: 15px;
 }
