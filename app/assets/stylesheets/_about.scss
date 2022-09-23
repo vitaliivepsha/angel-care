@@ -669,8 +669,11 @@
     line-height: 130%;
     text-align: center;
     color: #FFFFFF;
-    font-size: 14px;
-    line-height: 130%;
+    @include bp(xs) {
+      font-size: 14px;
+      line-height: 130%;
+      }
+
 
     & + p {
       padding-top: 10px;

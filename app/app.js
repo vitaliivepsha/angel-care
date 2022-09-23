@@ -27,6 +27,7 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/testimonials.html');
     require('./assets/templates/layouts/testimonials_patients.html');
     require('./assets/templates/layouts/testimonials_caregivers.html');
+    require('./assets/templates/layouts/author.html');
 
 }
 
