@@ -1,0 +1,359 @@
+.qualities-caregiver__main{
+  padding-top: 125px;
+  margin-bottom: 90px;
+  @include bp(xs) {
+    padding-top: 100px;
+    margin-bottom: 70px;
+  }
+  .section-title{
+    text-align: center;
+    width: 980px;
+    max-width: 100%;
+    margin: 0 auto 70px;
+    @include bp(xs) {
+      margin-bottom: 65px;
+    }
+  }
+}
+
+.qualities-caregiver__top{
+  height: 683px;
+  position: relative;
+  overflow: hidden;
+  @include bp(md) {
+    height: auto;
+    padding-bottom: 60px;
+    background-color: $bg-grey;
+  }
+  @include bp(xs) {
+    padding-bottom: 20px;
+  }
+  &:before{
+    position: absolute;
+    content: '';
+    background: $bg-grey;
+    width: 100%;
+    height: 635px;
+    @include bp(md) {
+      display: none;
+    }
+  }
+  >.container{
+    position: relative;
+    z-index: 1;
+    padding-top: 86px;
+    @include bp(md) {
+      padding-top: 0;
+    }
+  }
+}
+
+.qualities-caregiver__pic{
+  position: absolute;
+  width: 1045px;
+  height: 535px;
+  top: 148px;
+  left: 310px;
+  border-radius: 10px;
+  overflow: hidden;
+  @include bp(md) {
+    position: relative;
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0;
+  }
+  @include bp(xs) {
+    height: auto;
+    width: 100vw;
+  }
+  &:after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: $main;
+    mix-blend-mode: lighten;
+    opacity: 0.5;
+    border-radius: 10px;
+    @include bp(md) {
+      border-radius: 0;
+    }
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @include bp(md) {
+      display: none;
+    }
+    +img{
+      display: none;
+      @include bp(md) {
+        display: block;
+      }
+    }
+  }
+}
+
+.qualities-caregiver__txt{
+  position: relative;
+  z-index: 1;
+  width: 730px;
+  max-width: 100%;
+  border-radius: 10px;
+  background-color: $main;
+  color: #fff;
+  text-align: center;
+  padding: 50px 30px 90px;
+  box-shadow: 0 4px 20px rgba(64, 64, 64, 0.1);
+  @include bp(md) {
+    margin: -60px auto 0;
+  }
+  @include bp(xs) {
+    margin-top: -30px;
+    padding: 15px 15px 20px;
+  }
+  .section-title{
+    width: auto;
+    max-width: unset;
+    color: #fff;
+    margin-bottom: 35px;
+    @include bp(xs) {
+      margin: 0 -10px 20px;
+    }
+  }
+}
+
+
+.qualities-caregiver__txt-descr{
+  display: block;
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 130%;
+  @include bp(xs) {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+}
+
+.qualities-caregiver__txt-list{
+  >span{
+    display: block;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    margin-bottom: 35px;
+    @include bp(xs) {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+  }
+  >ul{
+    font-size: 18px;
+    line-height: 150%;
+    @include bp(xs) {
+      font-size: 14px;
+    }
+    li{
+      &:before{
+        content: '•';
+        color: #fff;
+        margin-right: 10px;
+        display: inline-block;
+        position: relative;
+      }
+    }
+  }
+}
+
+.qualities-caregiver__steps{
+  margin-bottom: 35px;
+  @include bp(xs) {
+    margin-bottom: 30px;
+  }
+}
+
+.qualities-caregiver__steps-main{
+  background-color: $yellow;
+  box-shadow: 0 4px 20px rgba(64, 64, 64, 0.1);
+  border-radius: 10px;
+  padding: 70px;
+  @include bp(xs) {
+    padding: 20px 12px;
+  }
+  >svg{
+    display: block;
+    margin: 0 auto 15px;
+    position: relative;
+    right: -22px;
+    @include bp(xs) {
+      right: auto;
+      width: 78px;
+      height: 85px;
+      margin-bottom: 12px;
+    }
+  }
+  .section-title{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 12px;
+    @include bp(xs) {
+      margin: 0 -5px 22px;
+    }
+  }
+}
+
+.qualities-caregiver__steps-list{
+  width: 782px;
+  max-width: 100%;
+  margin: 0 auto 35px;
+  @include bp(xs) {
+    margin-bottom: 20px;
+  }
+  li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    @include bp(xs) {
+      flex-direction: column;
+      text-align: center;
+    }
+    &:first-child{
+      i{
+        &:before{
+          background-color: $green;
+        }
+      }
+    }
+    &:nth-child(2){
+      i{
+        &:before{
+          background-color: $purple;
+        }
+      }
+    }
+    &:last-child{
+      margin-bottom: 0;
+      i{
+        &:before{
+          background-color: $red;
+        }
+        &:after{
+          display: none;
+          @include bp(xs) {
+            display: block;
+          }
+        }
+      }
+    }
+    i{
+      position: relative;
+      z-index: 1;
+      width: 123px;
+      min-width: 123px;
+      height: 123px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      font-size: 64px;
+      line-height: 150%;
+      font-style: normal;
+      margin-right: 20px;
+      @include bp(xs) {
+        width: 85px;
+        height: 85px;
+        min-width: unset;
+        margin-right: 0;
+        margin-bottom: 35px;
+        font-size: 40px;
+        border-width: 1px;
+      }
+      &:before{
+        position: absolute;
+        content: '';
+        width: 94px;
+        height: 94px;
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        @include bp(xs) {
+          width: 65px;
+          height: 65px;
+        }
+      }
+      &:after{
+        position: absolute;
+        content: '';
+        z-index: -1;
+        background-color: #fff;
+        width: 2px;
+        height: 52px;
+        left: 50%;
+        top: 106px;
+        transform: translateX(-50%);
+        @include bp(xs) {
+          width: 1px;
+          height: 30px;
+          top: 74px;
+        }
+      }
+      span{
+        position: relative;
+        z-index: 1;
+      }
+    }
+    div{
+      font-weight: 700;
+      font-size: 21px;
+      line-height: 120%;
+      color: #fff;
+      @include bp(xs) {
+        font-size: 14px;
+        line-height: 150%;
+      }
+    }
+  }
+}
+
+.qualities-caregiver__steps-footnote{
+  span{
+    display: block;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 120%;
+    @include bp(xs) {
+      font-size: 14px;
+    }
+    +span{
+      margin-top: 70px;
+      @include bp(xs) {
+        margin-top: 38px;
+      }
+      &:before{
+        position: absolute;
+        content: '';
+        height: 3px;
+        width: 228px;
+        background-color: #fff;
+        left: 50%;
+        bottom: calc(100% + 33px);
+        transform: translateX(-50%);
+        @include bp(xs) {
+          bottom: calc(100% + 16px);
+        }
+      }
+    }
+  }
+}
