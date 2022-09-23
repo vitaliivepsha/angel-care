@@ -64,4 +64,22 @@
     line-height: 130%;
     padding: 15px 30px 15px 15px;
   }
+  p{
+    margin-bottom: 10px;
+  }
+  ul{
+    list-style-type: disc;
+    padding-left: 18px;
+    margin-bottom: 10px;
+  }
+  ol{
+    list-style-type: decimal;
+    padding-left: 18px;
+    margin-bottom: 10px;
+  }
+  *{
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
 }

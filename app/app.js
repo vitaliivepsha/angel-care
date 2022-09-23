@@ -18,6 +18,7 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/how_can_i_care_for_a_family_member.html');
     require('./assets/templates/layouts/qulities_caregiver.html');
     require('./assets/templates/layouts/caregiver_courses.html');
+    require('./assets/templates/layouts/how_can_I_become_a_home_health_aide.html');
     require('./assets/templates/layouts/about.html');
     require('./assets/templates/layouts/about_benefits.html');
     require('./assets/templates/layouts/nhtd_1.html');
@@ -132,13 +133,6 @@ $(function () {
         }
         $btn.click(function () {
             $(this).hide().closest('.text-testimonial__item-top').find('.text-testimonial__item-txt').html(full_txt);
-        });
-    });
-
-    $('.review-text__more').click(function () {
-        $(this).hide().closest('.review-text__wrapper').find('.review-text').css({
-            'height': 'auto',
-            'max-height': 'unset'
         });
     });
 
