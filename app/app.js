@@ -34,6 +34,8 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/article.html');
     require('./assets/templates/layouts/blog.html');
     require('./assets/templates/layouts/blog-category.html');
+    require('./assets/templates/layouts/faq.html');
+    require('./assets/templates/layouts/homecare_services_homehealthe_aide.html');
 
 }
 
@@ -118,6 +120,11 @@ $(function () {
 
     $('.accordion-head').on('click', function () {
         $(this).closest('.accordion-item').toggleClass('active').find('.accordion-body').slideToggle('300');
+    });
+
+    $(".faq-item__head").click(function () {
+        $(this).toggleClass("active").next().slideToggle();
+        $(".faq-item__head").not(this).removeClass("active").next().slideUp();
     });
 
     // reviews
