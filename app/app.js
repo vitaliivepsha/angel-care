@@ -19,6 +19,7 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/qulities_caregiver.html');
     require('./assets/templates/layouts/caregiver_courses.html');
     require('./assets/templates/layouts/how_can_I_become_a_home_health_aide.html');
+    require('./assets/templates/layouts/blog_concerning_caregivers_and_careers.html');
     require('./assets/templates/layouts/about.html');
     require('./assets/templates/layouts/about_benefits.html');
     require('./assets/templates/layouts/nhtd_1.html');
