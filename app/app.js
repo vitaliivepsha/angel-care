@@ -32,6 +32,8 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/testimonials_caregivers.html');
     require('./assets/templates/layouts/author.html');
     require('./assets/templates/layouts/article.html');
+    require('./assets/templates/layouts/blog.html');
+    require('./assets/templates/layouts/blog-category.html');
 
 }
 

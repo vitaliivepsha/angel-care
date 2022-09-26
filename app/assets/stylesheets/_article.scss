@@ -286,6 +286,9 @@
 
 .article-content__aside {
   margin-top: 275px;
+  @include bp(lg) {
+    margin-top: 230px;
+    }
   @include bp(md) {
     margin-top: 70px;
   }
@@ -297,13 +300,13 @@
   }
 }
 
-.blog-aside {
-  position: sticky;
-  top: 170px;
-  @include bp(md) {
-    position: static;
-  }
-}
+//.blog-aside {
+//  position: sticky;
+//  top: 170px;
+//  @include bp(md) {
+//    position: static;
+//  }
+//}
 
 .blog-aside__item {
   background: $bg-grey;
@@ -459,6 +462,7 @@
     padding-bottom: 0;
     @include bp(xs) {
       padding-top: 19px;
+      padding-right: 10px;
       padding-left: 15px;
 
     }
