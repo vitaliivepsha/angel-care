@@ -21,34 +21,22 @@ body {
   @include bp(md) {
     display: block;
   }
-
   &.menu-opened {
     overflow: hidden;
-
     .mobile-menu__wrapper {
       z-index: 10001;
       visibility: visible;
       opacity: 1;
     }
+    .header-search{
+      z-index: 10002;
+    }
   }
-
   &.sumoStopScroll {
     overflow: auto;
   }
-
-  &.filters-opened {
-    overflow: hidden;
-
-    .overlay {
-      z-index: 10002;
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .mobile-filters__wrapper {
-      right: 0;
-      box-shadow: 0 0 20px rgba(56, 56, 56, 0.2);
-    }
+  &.swal2-shown {
+    position: static;
   }
 }
 
@@ -338,7 +326,8 @@ textarea:-webkit-autofill:hover {
 @import "author";
 @import "article";
 @import "blog";
-@import "faq";
+@import "blog-caregivers";
+
 
 // Parts
 @import "quality-items";

@@ -19,6 +19,7 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/qulities_caregiver.html');
     require('./assets/templates/layouts/caregiver_courses.html');
     require('./assets/templates/layouts/how_can_I_become_a_home_health_aide.html');
+    require('./assets/templates/layouts/blog_concerning_caregivers_and_careers.html');
     require('./assets/templates/layouts/about.html');
     require('./assets/templates/layouts/about_benefits.html');
     require('./assets/templates/layouts/nhtd_1.html');
@@ -146,6 +147,30 @@ $(function () {
         });
     });
 
+    // header language
+
+    $('.header-lang__btn').on('click', function () {
+        $(this).closest('.header-lang__wrapper').toggleClass('active');
+    });
+
+    $(document).click(function () {
+        $('.header-lang__wrapper').removeClass('active');
+    });
+
+    $(document).on('click', '.header-lang__wrapper', function (e) {
+        e.stopPropagation();
+    });
+
+    // header search
+
+    $('.header-search__btn').on('click', function () {
+        $('.header-search').addClass('active');
+    });
+
+    $('.header-search__close').on('click', function () {
+        $('.header-search').removeClass('active');
+    });
+
     // faq
 
     $('.faq-head').on('click', function () {
@@ -182,6 +207,11 @@ $(function () {
 
     $(document).on('click', '.mobile-menu__wrapper', function (e) {
         e.stopPropagation();
+    });
+
+    $('.mobile-menu__close').on('click', function () {
+        $('.mobile-menu__btn').removeClass('active');
+        $('body').removeClass('menu-opened');
     });
 
     $(window).resize(function () {
