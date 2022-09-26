@@ -109,9 +109,15 @@
   width: 956px;
   height: 535px;
   top: 182px;
-  left: 400px;
+  left: 755px;
   border-radius: 10px;
   overflow: hidden;
+  @media (max-width: 1505px) {
+    left: 531px;
+    }
+  @media (max-width: 1270px) {
+    left: 363px;
+  }
   @include bp(md) {
     position: relative;
     top: auto;
