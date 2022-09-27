@@ -47,7 +47,7 @@ require('bootstrap-sass');
 
 // Modules
 var Forms = require('_modules/forms');
-//var Popup = require('_modules/popup');
+var Popup = require('_modules/popup');
 //var LightGallery = require('_modules/lightgallery');
 //var Slider = require('_modules/slider');
 require('../node_modules/sumoselect/jquery.sumoselect.min');
