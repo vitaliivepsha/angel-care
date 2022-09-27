@@ -1,6 +1,7 @@
 .homehealthe {
   position: relative;
   margin-top: 74px;
+  margin-bottom: 77px;
   padding-top: 126px;
   padding-bottom: 101px;
   overflow: hidden;
@@ -9,13 +10,15 @@
   }
   @include bp(lg) {
     padding-top: 0;
-    }
+  }
   @include bp(sm) {
+    padding-bottom: 37px;
     background-color: $bg-grey;
-    }
+  }
   @include bp(xs) {
+    margin-bottom: 62px;
     padding-bottom: 20px;
-    }
+  }
 
   &:before {
     content: "";
@@ -27,8 +30,7 @@
     background-color: $bg-grey;
     @include bp(sm) {
       display: none;
-      }
-
+    }
   }
 
   & .container {
@@ -53,11 +55,11 @@
   }
   @include bp(md) {
     margin-top: -90px;
-    }
+  }
   @include bp(xs) {
     padding: 20px 10px;
     margin-top: -30px;
-    }
+  }
 
   & p {
     margin: 0;
@@ -69,13 +71,13 @@
     @include bp(xs) {
       font-size: 14px;
       line-height: 130%;
-      }
+    }
 
     & + p {
       margin-top: 20px;
       @include bp(xs) {
         margin-top: 10px;
-        }
+      }
     }
   }
 }
@@ -99,7 +101,7 @@
   @include bp(lg) {
     position: static;
     padding-right: 0;
-    }
+  }
 
   & div {
     width: 1045px;
@@ -109,8 +111,7 @@
     @include bp(lg) {
       border-radius: 0;
       width: 100%;
-      }
-
+    }
 
     & img {
       width: 100%;
@@ -129,6 +130,179 @@
         }
       }
     }
+  }
+}
 
+.homehealthe-care {
+  margin-bottom: 51px;
+  @include bp(xs) {
+    margin-bottom: 31px;
+  }
+
+  & + .caregiver-courses__faq {
+    margin-bottom: 15px;
+    @include bp(xs) {
+      margin-bottom: 30px;
+    }
+
+    & .faq-items .section-title {
+      margin-bottom: 39px;
+      @include bp(xs) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  & .section-title {
+    margin-bottom: 44px;
+    text-align: center;
+    @include bp(xs) {
+      margin-bottom: 11px;
+    }
+  }
+}
+
+.homehealthe-care__wrapper {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  @include bp(sm) {
+    flex-direction: column;
+    align-items: center;
+  }
+  @include bp(xs) {
+    gap: 20px;
+  }
+}
+
+.homehealthe-care__item {
+  flex-direction: column;
+  display: flex;
+  width: 350px;
+  @media (max-width: 420px) {
+    width: 100%;
+  }
+}
+
+.homehealthe-care__head,
+.homehealthe-care__body {
+  background: $main;
+  box-shadow: 0px 4px 20px rgba(64, 64, 64, 0.1);
+  border-radius: 10px;
+  color: #FFFFFF;
+
+}
+
+.homehealthe-care__head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  min-height: 60px;
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 130%;
+  text-align: center;
+  @include bp(xs) {
+    min-height: 50px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 130%;
+  }
+}
+
+.homehealthe-care__body {
+  flex-grow: 1;
+  padding: 43px 40px 44px 70px;
+  @include bp(md) {
+    padding: 43px 40px 44px 46px;
+  }
+  @include bp(xs) {
+    padding: 20px 40px 20px 19px;
+  }
+
+  & li {
+    display: flex;
+    align-items: center;
+
+    & + li {
+      margin-top: 20px;
+      @include bp(xs) {
+        margin-top: 10px;
+      }
+    }
+
+    & i {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 20px;
+      @include bp(xs) {
+        margin-right: 10px;
+      }
+    }
+
+
+    & span {
+      position: relative;
+      padding-left: 17px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 120%;
+      @include bp(xs) {
+        font-size: 14px;
+        line-height: 120%;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 6px;
+        width: 5px;
+        height: 5px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        background-color: #fff;
+        @include bp(xs) {
+
+        }
+      }
+    }
+  }
+}
+
+.homehealthe-text {
+  margin-bottom: 30px;
+}
+
+.homehealthe-text__inner {
+  background: $main;
+  box-shadow: 0px 4px 20px rgba(64, 64, 64, 0.1);
+  border-radius: 10px;
+  padding: 78px 20px;
+  @include bp(xs) {
+    padding: 22px 10px;
+  }
+
+  & p {
+    max-width: 380px;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    color: #FFFFFF;
+
+    & + p {
+      margin-top: 10px;
+    }
+
+    @include bp(xs) {
+      font-size: 14px;
+      line-height: 150%;
+    }
   }
 }
