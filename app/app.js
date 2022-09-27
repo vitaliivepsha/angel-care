@@ -47,11 +47,10 @@ require('bootstrap-sass');
 
 // Modules
 var Forms = require('_modules/forms');
-var Popup = require('_modules/popup');
-var LightGallery = require('_modules/lightgallery');
-var Slider = require('_modules/slider');
+//var Popup = require('_modules/popup');
+//var LightGallery = require('_modules/lightgallery');
+//var Slider = require('_modules/slider');
 require('../node_modules/sumoselect/jquery.sumoselect.min');
-require('../node_modules/ez-plus/src/jquery.ez-plus');
 require('../node_modules/sweetalert2/dist/sweetalert2');
 require('_modules/succinct');
 
@@ -226,98 +225,12 @@ $(function () {
         $(this).toggleClass('opened').closest('li').find('.submenu').slideToggle();
     });
 
-    // filters
-
-    $('.btn-filters').on('click', function () {
-        var btn_txt = $(this).find('span');
-        btn_txt.html() == 'Скрыть фильтры' ? btn_txt.html('Отобразить фильтры') : btn_txt.html('Скрыть фильтры');
-        $('.categories-main').toggleClass('opened-filters');
-    });
-
-    $(window).resize(function () {
-        var btn_txt = $('.btn-filters').find('span');
-        if ($(window).width() < 991) {
-            btn_txt.html('Отобразить фильтры');
-            $('.categories-main').removeClass('opened-filters');
-        }
-    });
-
-    $('.btn-filters__mob').on('click', function () {
-        $('body').toggleClass('filters-opened');
-    });
-
-    $('.mobile-filters__close').click(function () {
-        $('body').removeClass('filters-opened');
-    });
-
-    $(document).click(function () {
-        $('body').removeClass('filters-opened');
-    });
-
-    $(document).on('click', '.mobile-filters__wrapper', function (e) {
-        e.stopPropagation();
-    });
-
-    $(document).on('click', '.btn-filters__mob', function (e) {
-        e.stopPropagation();
-    });
-
-    $('.categories-filter__head').on('click', function () {
-        $(this).toggleClass('active').next().slideToggle();
-    });
-
-    $(window).resize(function () {
-        if ($(window).width() > 991) {
-            $('body').removeClass('filters-opened');
-        }
-    });
-
     // tabs
 
     $('.tabs').on('click', 'li:not(.active)', function () {
         $(this)
             .addClass('active').siblings().removeClass('active')
             .closest('.tabs-wrapper').find('.tabs-content').removeClass('active').eq($(this).index()).addClass('active');
-    });
-
-    // spoiler
-
-    $(".spoiler-head").click(function () {
-        $(this).toggleClass("active").next(".spoiler-body").slideToggle();
-    });
-
-    // map
-
-    $('.city').mousedown(function (e) {
-        e.stopPropagation();
-        var map = $('.map-wrapper'),
-            dot = $(this).find('circle'),
-            left = dot.offset().left - map.offset().left,
-            top = dot.offset().top - map.offset().top;
-        $(this).addClass('active').siblings().removeClass('active')
-            .closest('.map-wrapper').find('.title').removeClass('active').eq($(this).index()).addClass('active')
-            .closest('.distributors-wrapper').find('.distributors-info').removeClass('active').eq($(this).index()).addClass('active');
-        $('.map-wrapper .title.active').each(function () {
-            var title_pos = $(this).width() + 28;
-            $(this).css({'left': left + 3 - title_pos / 2, 'top': top - 25});
-        });
-    });
-
-    $('.map-cities__list').on('click', 'li', function (e) {
-        var city_name = $(this).html();
-        $(this).addClass('active').siblings().removeClass('active');
-        $(this).closest('.map-cities__wrapper').find('.map-cities__title').html(city_name);
-    });
-
-    $('.distributors-info__head').on('click', function () {
-        $(this).toggleClass('opened').next('.distributors-info__body').slideToggle();
-    });
-
-    $(window).resize(function () {
-        if ($(window).width() > 574) {
-            $('.distributors-info__head').removeClass('opened');
-            $('.distributors-info__body').removeAttr('style');
-        }
     });
 
     // lazy load
@@ -338,32 +251,4 @@ $(function () {
         });
     };
     $(window).scroll(lazyload);
-
-    // zoom product
-
-    $(window).resize(function () {
-        if ($(window).width() > 991) {
-            $('.zoom-pic').ezPlus({
-                borderSize: 0,
-                easing: false,
-                zoomWindowFadeIn: 300,
-                zoomWindowFadeOut: 300,
-                lensFadeIn: 300,
-                lensFadeOut: 300,
-                zoomWindowHeight: 500,
-                zoomWindowWidth: 680
-            });
-        } else {
-            $('.zoom-pic').ezPlus({
-                zoomType: 'inner',
-                cursor: 'crosshair',
-                borderSize: 0,
-                zoomWindowHeight: 600,
-                zoomWindowFadeIn: 300,
-                zoomWindowFadeOut: 300,
-                lensFadeIn: 300,
-                lensFadeOut: 300,
-            });
-        }
-    });
 });
