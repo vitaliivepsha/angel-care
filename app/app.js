@@ -37,6 +37,7 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/blog-category.html');
     require('./assets/templates/layouts/faq.html');
     require('./assets/templates/layouts/homecare_services_homehealthe_aide.html');
+    require('./assets/templates/layouts/personal_care.html');
 
 }
 
