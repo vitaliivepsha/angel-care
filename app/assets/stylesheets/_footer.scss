@@ -212,3 +212,47 @@
     }
   }
 }
+
+.fixed-controls{
+  visibility: hidden;
+  opacity: 0;
+  transition: linear .2s;
+  pointer-events: none;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 11;
+  @include bp(xs) {
+    bottom: 20px;
+  }
+  &.active{
+    visibility: visible;
+    opacity: 1;
+  }
+  >.container{
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.to-top{
+  width: 60px;
+  height: 60px;
+  background: $main;
+  box-shadow: 0 4px 20px rgba(64, 64, 64, 0.2);
+  border-radius: 5px;
+  pointer-events: all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include bp(xs) {
+    width: 50px;
+    height: 50px;
+  }
+  svg{
+    @include bp(xs) {
+      height: 22px;
+    }
+  }
+}

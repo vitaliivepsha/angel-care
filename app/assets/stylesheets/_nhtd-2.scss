@@ -108,6 +108,7 @@
     font-size: 30px;
     line-height: 130%;
     border-radius: 10px 10px 0 0;
+    margin: 0 auto;
   }
 
 }
@@ -293,7 +294,7 @@
     top: 50px;
     bottom: 90px;
     left: 61px;
-    width: 3px;
+    width: 2px;
     background-color: #fff;
     @include bp(xs) {
       display: none;
@@ -392,6 +393,7 @@
     }
 
     &:after {
+      display: none;
       content: "";
       position: absolute;
       top: calc(100% - 10px);
@@ -401,6 +403,9 @@
       width: 1px;
       height: 30px;
       background-color: #fff;
+      @include bp(xs) {
+        display: block;
+      }
     }
 
   }

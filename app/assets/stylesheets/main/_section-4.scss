@@ -36,14 +36,16 @@
     position: absolute;
     content: '';
     height: 558px;
-    width: calc(110vw - 523px);
-    right: -263px;
+    width: calc(110vw - 623px);
+    min-width: 1496px;
+    left: -502px;
     top: -149px;
     background: $yellow;
     border-radius: 10px;
     @include bp(md) {
       z-index: -1;
       width: 100vw;
+      min-width: unset;
       height: calc(100% - 100px);
       left: 50%;
       transform: translateX(-50%);

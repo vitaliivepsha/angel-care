@@ -19,5 +19,10 @@
   }
   .article-content__aside{
     margin-top: 0;
+    .blog-aside{
+      @include bp(md) {
+        margin-top: 70px;
+      }
+    }
   }
 }

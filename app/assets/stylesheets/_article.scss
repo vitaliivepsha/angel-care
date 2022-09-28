@@ -307,6 +307,12 @@
 //  }
 //}
 
+.blog-aside{
+  @include bp(md) {
+    margin-top: 50px;
+  }
+}
+
 .blog-aside__item {
   background: $bg-grey;
   border-radius: 10px;

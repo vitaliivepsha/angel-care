@@ -233,6 +233,19 @@ $(function () {
             .closest('.tabs-wrapper').find('.tabs-content').removeClass('active').eq($(this).index()).addClass('active');
     });
 
+    // fixed controls
+
+
+    $(window).on('scroll', function() {
+        var wh = $(window).height();
+        if ($(this).scrollTop() > wh){
+            $('.fixed-controls').addClass('active');
+        }
+        else{
+            $('.fixed-controls').removeClass('active');
+        }
+    });
+
     // lazy load
     var lazyload = function () {
         var scroll = $(window).scrollTop() + $(window).height() * 3;
