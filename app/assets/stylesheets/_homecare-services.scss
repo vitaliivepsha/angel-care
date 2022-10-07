@@ -1,0 +1,235 @@
+.homecare-services__main{
+  padding-top: 105px;
+  padding-bottom: 20px;
+  @include bp(xs) {
+    padding-top: 100px;
+    padding-bottom: 35px;
+  }
+  .section-title{
+    margin-bottom: 60px;
+    text-align: center;
+    @include bp(xs) {
+      margin-bottom: 65px;
+    }
+  }
+}
+
+.homecare-services__main-text{
+  background: $main;
+  box-shadow: 0 4px 20px rgba(64, 64, 64, 0.1);
+  border-radius: 10px;
+  padding: 45px 95px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  @include bp(xs) {
+    font-size: 14px;
+    line-height: 130%;
+    padding: 20px 10px;
+  }
+  p{
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
+.homecare-services__who{
+  margin-bottom: 35px;
+  @include bp(xs) {
+    margin-bottom: 15px;
+  }
+  .who-main{
+    @include bp(xs) {
+      margin-top: -30px;
+      border-radius: 10px;
+      padding-top: 50px;
+    }
+    .section-title{
+      width: 460px;
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .who-wrapper{
+    &:after{
+      @include bp(xs) {
+        display: none;
+      }
+    }
+  }
+  .who-pic{
+    @include bp(xs) {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      top: auto;
+      border-radius: 0;
+    }
+  }
+  .who-link{
+    @include bp(xs) {
+      display: flex;
+      width: 75px;
+      height: 75px;
+      left: 30px;
+      top: -37px;
+      padding: 6px;
+    }
+    img{
+      @include bp(xs) {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.homecare-services__scheme{
+  background-color: $main;
+  margin-bottom: 50px;
+  @include bp(xs) {
+    margin-bottom: 40px;
+  }
+  .services-title{
+    @include bp(xs) {
+      font-size: 21px;
+    }
+  }
+}
+
+.homecare-certified{
+  @include bp(xs) {
+    padding-bottom: 35px;
+  }
+  >.container{
+    display: flex;
+    justify-content: flex-end;
+  }
+  .who-main{
+    @include bp(xs) {
+      margin-top: -30px;
+      border-radius: 10px;
+      padding-top: 50px;
+    }
+  }
+  .who-wrapper{
+    &:before{
+      left: -852px;
+    }
+    &:after{
+      left: -276px;
+      @include bp(md) {
+        left: 50%;
+      }
+      @include bp(xs) {
+        display: none;
+      }
+    }
+  }
+  .who-pic{
+    left: -650px;
+    @include bp(xs) {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      top: auto;
+      border-radius: 0;
+    }
+  }
+  .who-link{
+    right: calc(100% - 17px);
+    @include bp(xs) {
+      display: flex;
+      width: 75px;
+      height: 75px;
+      right: 30px;
+      top: -37px;
+      padding: 6px;
+    }
+    img{
+      @include bp(xs) {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.homecare-services__testimonials{
+  padding-top: 35px;
+  padding-bottom: 35px;
+  @include bp(xs) {
+    padding-bottom: 30px;
+  }
+  .testimonials__links-item{
+    i{
+      svg{
+        margin-left: 0;
+      }
+    }
+  }
+  .testimonials__links{
+    margin-bottom: 70px;
+    @include bp(xs) {
+      margin-bottom: 60px;
+    }
+  }
+  .text-testimonials{
+    .section-title{
+      text-align: center;
+      margin-bottom: 30px;
+      @include bp(xs) {
+        margin-bottom: 0;
+      }
+    }
+    .btn{
+      width: 320px;
+      max-width: 100%;
+      margin: 0 auto 0;
+      background-color: $main;
+      color: #fff;
+      @include bp(xs) {
+        width: 100%;
+      }
+      &:hover{
+        background-color: transparent;
+        color: $main;
+      }
+    }
+  }
+}
+
+.homecare-services__testimonials-text{
+  background: $main;
+  box-shadow: 0 4px 20px rgba(64, 64, 64, 0.1);
+  border-radius: 10px;
+  padding: 45px 95px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 290px;
+  margin-bottom: 110px;
+  @include bp(xs) {
+    padding: 20px 10px;
+    font-size: 14px;
+    line-height: 130%;
+    min-height: unset;
+    margin-bottom: 115px;
+  }
+  p{
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
