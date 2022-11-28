@@ -321,6 +321,30 @@
   }
 }
 
+.skilled-services__main-top{
+  padding-bottom: 30px;
+  .section-title{
+    width: 720px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .skilled-service__top-inner{
+    &:before{
+      background-color: $yellow;
+    }
+  }
+  .skilled-service__top-text{
+    background-color: $main;
+    padding: 83px 53px;
+    p{
+      &.accent{
+        color: $yellow;
+      }
+    }
+  }
+}
+
 .skilled-service__bot{
   padding-top: 125px;
   padding-bottom: 35px;
@@ -573,5 +597,58 @@
   line-height: 130%;
   @include bp(xs) {
     font-size: 14px;
+  }
+}
+
+.skilled-services__items{
+  padding-top: 35px;
+  padding-bottom: 35px;
+  .section-pretitle{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .section-title{
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+.skilled-services__accordion{
+  &.patients-accordion{
+    width: 100%;
+    .accordion-item{
+      &:nth-child(1){
+        .accordion-head{
+          background-color: $yellow;
+        }
+        .accordion-body{
+          background-color: $yellow;
+        }
+      }
+      &:nth-child(2){
+        .accordion-head{
+          background-color: $green;
+        }
+        .accordion-body{
+          background-color: $green;
+        }
+      }
+      &:nth-child(3){
+        .accordion-head{
+          background-color: $red;
+        }
+        .accordion-body{
+          background-color: $red;
+        }
+      }
+      &:nth-child(4){
+        .accordion-head{
+          background-color: $purple;
+        }
+        .accordion-body{
+          background-color: $purple;
+        }
+      }
+    }
   }
 }
