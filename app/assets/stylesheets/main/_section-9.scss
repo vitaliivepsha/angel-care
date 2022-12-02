@@ -4,8 +4,8 @@
   background-color: $bg-grey;
   overflow: hidden;
   @include bp(xs) {
-    padding-top: 20px;
-    padding-bottom: 30px;
+    padding-top: 35px;
+    padding-bottom: 72px;
   }
 }
 
@@ -16,10 +16,7 @@
   margin-bottom: 65px;
   @include bp(sm) {
     flex-direction: column;
-    margin-bottom: 45px;
-  }
-  @include bp(xs) {
-    margin-bottom: 30px;
+    margin-bottom: 72px;
   }
   .btn{
     background-color: $red;
@@ -36,7 +33,6 @@
     }
     @include bp(xs) {
       width: 100%;
-      margin-top: 20px;
     }
     &:hover{
       background-color: $main;
@@ -52,53 +48,138 @@
     flex-direction: column;
     align-items: center;
   }
-  @include bp(xs) {
-    margin-bottom: -50px;
-  }
   >.col{
-    padding-top: 110px;
-    margin-right: 60px;
+    padding-top: 158px;
+    margin-right: 72px;
     @include bp(lg) {
-      margin-right: 40px;
-      padding-top: 100px;
-    }
-    @include bp(md) {
-      margin-right: 36px;
-      padding-top: 80px;
+      margin-right: 60px;
     }
     @include bp(sm) {
       margin-right: 0;
-      margin-bottom: 40px;
-      padding-top: 0;
-    }
-    @include bp(xs) {
-      margin-bottom: 50px;
+      padding-top: 78px;
     }
     &.double{
-      padding-top: 0;
-      margin-right: 92px;
+      padding-top: 30px;
+      margin-right: 130px;
+      position: relative;
       @include bp(lg) {
         margin-right: 62px;
       }
       @include bp(md) {
-        margin-right: 50px;
+        margin-right: 45px;
+        padding-top: 50px;
       }
       @include bp(sm) {
-        width: 270px;
+        width: 210px;
         display: flex;
         justify-content: space-between;
         margin-right: 0;
-        margin-bottom: 60px;
+        padding-top: 78px;
       }
-      @include bp(xs) {
-        width: 248px;
-        margin-bottom: 74px;
+      >svg{
+        position: absolute;
+        left: calc(100% + 64px);
+        top: 228px;
+        @include bp(lg) {
+          left: calc(100% + 5px);
+        }
+        @include bp(md) {
+          top: 202px;
+          left: calc(100% - 5px);
+        }
+        @include bp(sm) {
+          left: 50%;
+          transform: translateX(-50%) rotate(90deg);
+          top: calc(100% + 36px);
+        }
+      }
+      .process-item{
+        +.process-item{
+          margin-top: 40px;
+          @include bp(sm) {
+            margin-top: 0;
+          }
+        }
+        >div{
+          >svg{
+            display: none;
+          }
+        }
+      }
+      &.md{
+        padding-top: 0;
+        margin-right: 140px;
+        @include bp(lg) {
+          margin-right: 90px;
+        }
+        @include bp(md) {
+          margin-right: 45px;
+        }
+        @include bp(sm) {
+          width: 270px;
+          margin-right: 0;
+        }
+        >svg{
+          left: calc(100% + 30px);
+          @include bp(lg) {
+            left: calc(100% + 5px);
+          }
+          @include bp(md) {
+            left: calc(100% - 5px);
+          }
+          @include bp(sm) {
+            left: 50%;
+            transform: translateX(-50%) rotate(90deg);
+            top: calc(100% + 36px);
+          }
+        }
+        .process-item{
+          +.process-item{
+            margin-top: 60px;
+            @include bp(sm) {
+              margin-top: 0;
+              margin-left: 50px;
+            }
+          }
+          >span{
+            @include bp(sm) {
+              min-width: max-content;
+              max-width: max-content;
+            }
+          }
+        }
+      }
+      .process-item{
+        >span{
+          position: relative;
+          min-width: max-content;
+          left: 50%;
+          transform: translateX(-50%);
+          @include bp(sm) {
+            min-width: 100%;
+            max-width: 100%;
+          }
+        }
       }
     }
     &.lg{
       padding-top: 42px;
       @include bp(sm) {
         padding-top: 0;
+      }
+    }
+    &.md{
+    }
+    &.sm{
+      padding-top: 163px;
+      @include bp(sm) {
+        padding-top: 78px;
+      }
+    }
+    &.xs{
+      padding-top: 168px;
+      @include bp(sm) {
+        padding-top: 78px;
       }
     }
     &:last-child{
@@ -114,9 +195,6 @@
   }
   @include bp(md) {
     width: 100px;
-  }
-  @include bp(xs) {
-    width: 96px;
   }
   >div{
     position: relative;
@@ -135,10 +213,6 @@
       width: 100px;
       height: 100px;
     }
-    @include bp(xs) {
-      width: 96px;
-      height: 96px;
-    }
     >i{
       display: flex;
       align-items: center;
@@ -154,30 +228,27 @@
         width: 85px;
         height: 85px;
       }
-      @include bp(xs) {
-        width: 80px;
-        height: 80px;
-        padding: 22px;
+      >svg{
+        @include bp(md) {
+          width: 40px;
+        }
       }
     }
     >svg{
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      left: calc(100% + 17px);
+      left: calc(100% + 20px);
       @include bp(lg) {
-        left: calc(100% + 10px);
+        left: calc(100% + 14px);
       }
       @include bp(md) {
-        left: calc(100% + 8px);
+        left: calc(100% + 14px);
       }
       @include bp(sm) {
         left: 50%;
         transform: translateX(-50%) rotate(90deg);
-        top: calc(100% + 55px);
-      }
-      @include bp(xs) {
-        max-width: 100%;
+        top: calc(100% + 63px);
       }
     }
   }
@@ -186,20 +257,20 @@
     text-align: center;
     font-size: 21px;
     line-height: 130%;
-    margin-top: 20px;
+    margin-top: 14px;
     @include bp(md) {
       font-size: 18px;
       margin-top: 15px;
+      min-width: 120px;
+      left: 50%;
+      transform: translateX(-50%);
+      position: relative;
     }
     @include bp(sm) {
       min-width: max-content;
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    @include bp(xs) {
       font-size: 16px;
       color: $main;
+      margin-top: 4px;
     }
   }
   &__blue{
@@ -256,9 +327,25 @@
     }
   }
   &__email{
-    margin-top: 17px;
+    margin-top: 60px;
+    position: relative;
     @include bp(sm) {
       margin-top: 0;
+    }
+    >svg{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: calc(100% + 20px);
+      @include bp(sm) {
+        transform: none;
+        bottom: auto;
+        top: 45px;
+        left: auto;
+        width: 20px;
+        height: 20px;
+        right: calc(100% + 15px);
+      }
     }
     >div{
       >svg{
@@ -294,9 +381,6 @@
     @include bp(md) {
       width: 170px;
     }
-    @include bp(xs) {
-      width: 174px;
-    }
     >div{
       width: 268px;
       height: 268px;
@@ -307,10 +391,6 @@
       @include bp(md) {
         width: 170px;
         height: 170px;
-      }
-      @include bp(xs) {
-        width: 174px;
-        height: 174px;
       }
       >i{
         width: 226px;
@@ -323,12 +403,112 @@
           width: 150px;
           height: 150px;
         }
-        @include bp(xs) {
-          width: 146px;
-          height: 146px;
+        svg{
+          width: 44px;
+        }
+      }
+    }
+  }
+  &__md{
+    width: 160px;
+    @include bp(md) {
+      width: 140px;
+    }
+    @include bp(sm) {
+      width: 110px;
+    }
+    >div{
+      width: 160px;
+      height: 160px;
+      @include bp(md) {
+        width: 140px;
+        height: 140px;
+      }
+      @include bp(sm) {
+        width: 110px;
+        height: 110px;
+      }
+      >i{
+        width: 135px;
+        height: 135px;
+        @include bp(md) {
+          width: 115px;
+          height: 115px;
+        }
+        @include bp(sm) {
+          width: 93px;
+          height: 93px;
         }
         svg{
           width: 44px;
+        }
+      }
+    }
+  }
+  &__sm{
+    width: 130px;
+    @include bp(lg) {
+    }
+    @include bp(md) {
+      width: 90px;
+    }
+    >div{
+      width: 130px;
+      height: 130px;
+      @include bp(lg) {
+      }
+      @include bp(md) {
+        width: 90px;
+        height: 90px;
+      }
+      >i{
+        width: 110px;
+        height: 110px;
+        @include bp(lg) {
+        }
+        @include bp(md) {
+          width: 75px;
+          height: 75px;
+        }
+        svg{
+          width: 44px;
+          @include bp(md) {
+            width: 34px;
+          }
+        }
+      }
+    }
+  }
+  &__xs{
+    width: 120px;
+    @include bp(lg) {
+    }
+    @include bp(md) {
+      width: 80px;
+    }
+    >div{
+      width: 120px;
+      height: 120px;
+      @include bp(lg) {
+      }
+      @include bp(md) {
+        width: 80px;
+        height: 80px;
+      }
+      >i{
+        width: 101px;
+        height: 101px;
+        @include bp(lg) {
+        }
+        @include bp(md) {
+          width: 65px;
+          height: 65px;
+        }
+        svg{
+          width: 37px;
+          @include bp(md) {
+            width: 28px;
+          }
         }
       }
     }

@@ -893,6 +893,12 @@
     & .process-item__green > div {
       border-color: $green;
     }
+    .process-body > .col.double > svg path{
+      fill: #fff;
+    }
+    .process-item__email > svg rect{
+      stroke: #fff;
+    }
   }
 }
 
