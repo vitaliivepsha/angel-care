@@ -39,6 +39,8 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/homecare_services_homehealthe_aide.html');
     require('./assets/templates/layouts/personal_care.html');
     require('./assets/templates/layouts/homecare_services.html');
+    require('./assets/templates/layouts/vacancies.html');
+    require('./assets/templates/layouts/vacancy.html');
 
 }
 
@@ -245,6 +247,35 @@ $(function () {
         else{
             $('.fixed-controls').removeClass('active');
         }
+    });
+
+    // upload file
+
+    function getFileParam() {
+        var filesExt = ['pdf', 'doc', 'docx', 'rtf'],
+            parts = $('input[type=file]').val().split('.'),
+            elPreview = $('#preview'),
+            errorMessage = $('#uploaded-file').data('error');
+
+        if(filesExt.join().search(parts[parts.length - 1]) != -1) {
+            var file = document.getElementById('uploaded-file').files[0];
+            if (file) {
+                if (/\.(pdf|doc|docx|rtf)$/i.test(file.name)) {
+                    elPreview.html('').removeClass('error');
+                    elPreview.html(file.name);
+                }else{
+                    elPreview.html(errorMessage).addClass('error');
+                }
+            }else{
+                elPreview.html(errorMessage).addClass('error');
+            }
+        }else{
+            elPreview.html(errorMessage).addClass('error');
+        }
+    }
+
+    $('#uploaded-file').on('change', function(){
+        getFileParam();
     });
 
     // lazy load
