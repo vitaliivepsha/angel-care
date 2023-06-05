@@ -41,6 +41,8 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/homecare_services.html');
     require('./assets/templates/layouts/vacancies.html');
     require('./assets/templates/layouts/vacancy.html');
+    require('./assets/templates/layouts/search-results.html');
+    require('./assets/templates/layouts/search-results-not-found.html');
 
 }
 
